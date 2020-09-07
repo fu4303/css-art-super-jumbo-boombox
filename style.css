@@ -1,0 +1,398 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 242) * 1vmin);
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+}
+
+img {
+  height: calc(var(--size) * 1vmin);
+  opacity: 0.8;
+}
+
+img,
+.boombox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.boombox {
+  width: calc(362 * var(--unit));
+  height: calc(242 * var(--unit));
+  border: 2px solid red;
+  overflow: hidden;
+}
+
+.boombox .bb__body {
+  position: absolute;
+  top: 14%;
+  left: 2%;
+  width: 96%;
+  height: 72%;
+  overflow: hidden;
+}
+
+.boombox .bb__body .big__sp {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 29%;
+  height: 59%;
+}
+
+.boombox .bb__body .big__sp__box {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  width: 92%;
+  height: 93%;
+  overflow: hidden;
+}
+
+.boombox .bb__body .big__sp__box__out {
+  opacity: 0.5;
+  position: absolute;
+  top: -5%;
+  left: -7%;
+  width: calc(106 * var(--unit));
+  height: calc(106 * var(--unit));
+  border-radius: 100%;
+  background: red;
+  overflow: hidden;
+}
+
+.boombox .bb__body .big__sp__box__out__edge {
+  position: absolute;
+  width: 15%;
+  height: 7%;
+  background: blue;
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(1) {
+  top: 13%;
+  left: 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(2) {
+  top: 13%;
+  right: 10%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(3) {
+  bottom: 13%;
+  right: 10%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(4) {
+  bottom: 13%;
+  left: 10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.boombox .bb__body .big__sp__box__out__edge::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(10deg, transparent 0 50%, orange 50% 100%);
+}
+
+.boombox .bb__body .big__sp__box__out__edge::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(-10deg, orange 0 50%, transparent 50% 100%);
+}
+
+.boombox .bb__body .big__sp__box__out__edge__screw {
+  position: absolute;
+  width: calc(4 * var(--unit));
+  height: calc(4 * var(--unit));
+  border-radius: 100%;
+  background: orange;
+}
+
+.boombox .bb__body .big__sp__box__out__inner1 {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  background: blue;
+}
+
+.boombox .bb__body .big__sp__box__out__inner2 {
+  position: absolute;
+  width: 54%;
+  height: 54%;
+  border-radius: 100%;
+  background: orange;
+}
+
+.boombox .bb__body .big__sp__box__out__inner3 {
+  position: absolute;
+  width: 27%;
+  height: 27%;
+  border-radius: 100%;
+  background: green;
+}
+
+.boombox .bb__body .big__sp__box__out__inner4 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border: 2px solid black;
+  border-radius: 100%;
+  background: green;
+}
+
+.boombox .bb__body .top__sp__box {
+  opacity: 0.6;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+  width: 28%;
+  height: 36%;
+  background: red;
+}
+
+.boombox .bb__body .top__sp__box__leftsp {
+  position: absolute;
+  top: 8%;
+  left: 9%;
+  width: 45%;
+  height: 61%;
+  background: blue;
+}
+
+.boombox .bb__body .top__sp__box__leftsp::before, .boombox .bb__body .top__sp__box__leftsp::after {
+  width: 100%;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.boombox .bb__body .top__sp__box__leftsp:before {
+  border-bottom: solid calc(3 * var(--unit)) blue;
+  border-left: solid calc(3 * var(--unit)) transparent;
+  border-right: solid calc(3 * var(--unit)) transparent;
+  bottom: 100%;
+}
+
+.boombox .bb__body .top__sp__box__leftsp:after {
+  border-top: solid calc(3 * var(--unit)) blue;
+  border-left: solid calc(3 * var(--unit)) transparent;
+  border-right: solid calc(3 * var(--unit)) transparent;
+  top: 100%;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__stick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 10%;
+  background: orange;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 50px 50px 50px 50px;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__stick::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  width: calc(3 * var(--unit));
+  height: calc(3 * var(--unit));
+  background: green;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__stick::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  width: calc(3 * var(--unit));
+  height: calc(3 * var(--unit));
+  background: green;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__stick:nth-child(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.boombox .bb__body .top__sp__box__leftsp__mesh {
+  position: absolute;
+  width: calc(40 * var(--unit));
+  height: calc(40 * var(--unit));
+  border-radius: 100%;
+  border: calc(2 * var(--unit)) solid #000;
+  background: red;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__inners {
+  position: absolute;
+  width: calc(40 * var(--unit));
+  height: calc(40 * var(--unit));
+  border-radius: 100%;
+  border: calc(2 * var(--unit)) solid #000;
+  background: red;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__inners__inner1 {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  background: blue;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__inners__inner2 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 100%;
+  background: green;
+}
+
+.boombox .bb__body .top__sp__box__leftsp__inners__inner3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  border: calc(1 * var(--unit)) solid #000;
+  background: green;
+}
+
+.boombox .bb__body .top__sp__box__rightsp {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  width: 35%;
+  height: 61%;
+  background: blue;
+}
+
+.boombox .bb__body .top__sp__box__rightsp::before, .boombox .bb__body .top__sp__box__rightsp::after {
+  width: 100%;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.boombox .bb__body .top__sp__box__rightsp:before {
+  border-bottom: solid calc(3 * var(--unit)) blue;
+  border-left: solid calc(3 * var(--unit)) transparent;
+  border-right: solid calc(3 * var(--unit)) transparent;
+  bottom: 100%;
+}
+
+.boombox .bb__body .top__sp__box__rightsp:after {
+  border-top: solid calc(3 * var(--unit)) blue;
+  border-left: solid calc(3 * var(--unit)) transparent;
+  border-right: solid calc(3 * var(--unit)) transparent;
+  top: 100%;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__mid {
+  position: absolute;
+  width: 44%;
+  height: 113%;
+  background: orange;
+  z-index: 3;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__mid__mesh {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background: green;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__screw {
+  position: absolute;
+  width: calc(5 * var(--unit));
+  height: calc(5 * var(--unit));
+  border-radius: 100%;
+  border: calc(1 * var(--unit)) solid #000;
+  background: orange;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__screw:nth-child(5) {
+  top: -1%;
+  left: 7%;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__screw:nth-child(2) {
+  top: -1%;
+  right: 7%;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__screw:nth-child(3) {
+  bottom: -1%;
+  right: 7%;
+}
+
+.boombox .bb__body .top__sp__box__rightsp__screw:nth-child(4) {
+  bottom: -1%;
+  left: 7%;
+}
+
+.boombox .bb__body .top__sp__box__btm {
+  position: absolute;
+  bottom: 3%;
+  right: 10%;
+  width: 80%;
+  height: 19%;
+  background: blue;
+}
+
+.boombox .bb__body .top__sp__box__btm__shade {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: red;
+}
+/*# sourceMappingURL=style.css.map */

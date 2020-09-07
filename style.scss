@@ -1,0 +1,424 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --size: 100;
+    --unit: calc((var(--size) / 242) * 1vmin);
+}
+
+body {
+    background: white;
+    min-height: 100vh;
+}
+
+img {
+    height: calc(var(--size) * 1vmin);
+    opacity: 0.8;
+}
+
+img,
+.boombox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.transCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boombox {
+    width: calc(362 * var(--unit));
+    height: calc(242 * var(--unit));
+    border: 2px solid red;
+    overflow: hidden;
+
+    .bb__body {
+        // opacity: 0.5;
+        position: absolute;
+        top: 14%;
+        left: 2%;
+        width: 96%;
+        height: 72%;
+        // background: pink;
+        overflow: hidden;
+
+        .big__sp {
+            // opacity: 0.6;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 29%;
+            height: 59%;
+            // background: red;
+
+            &__box {
+                // opacity: 0.5;
+                position: absolute;
+                top: 0%;
+                left: 5%;
+                width: 92%;
+                height: 93%;
+                // background: blue;
+                overflow: hidden;
+
+
+
+                &__out {
+                    opacity: 0.5;
+                    position: absolute;
+                    top: -5%;
+                    left: -7%;
+                    width: calc(106 * var(--unit));
+                    height: calc(106 * var(--unit));
+                    border-radius: 100%;
+                    background: red;
+                    overflow: hidden;
+
+
+                    //SCREWS 
+
+                    &__edge {
+                        position: absolute;
+
+                        width: 15%;
+                        height: 7%;
+                        background: blue;
+
+
+                        &:nth-child(1) {
+                            top: 13%;
+                            left: 10%;
+                            transform: rotate(45deg);
+                        }
+
+                        &:nth-child(2) {
+                            top: 13%;
+                            right: 10%;
+                            transform: rotate(135deg);
+                        }
+
+
+                        &:nth-child(3) {
+                            bottom: 13%;
+                            right: 10%;
+                            transform: rotate(-135deg);
+                        }
+
+                        &:nth-child(4) {
+                            bottom: 13%;
+                            left: 10%;
+                            transform: rotate(-45deg);
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 0%;
+                            width: 100%;
+                            height: 40%;
+                            background: linear-gradient(10deg, transparent 0 50%, orange 50% 100%);
+                        }
+
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -30%;
+                            left: 0%;
+                            width: 100%;
+                            height: 40%;
+                            background: linear-gradient(-10deg, orange 0 50%, transparent 50% 100%);
+                        }
+
+                        &__screw {
+                            position: absolute;
+                            @extend .transCenter;
+                            width: calc(4 * var(--unit));
+                            height: calc(4 * var(--unit));
+                            border-radius: 100%;
+                            background: orange;
+                        }
+                    }
+
+                    //SPEAKER RIMS
+
+                    &__inner1 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 80%;
+                        height: 80%;
+                        border-radius: 100%;
+                        background: blue;
+                    }
+
+                    &__inner2 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 54%;
+                        height: 54%;
+                        border-radius: 100%;
+                        background: orange;
+                    }
+
+                    &__inner3 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 27%;
+                        height: 27%;
+                        border-radius: 100%;
+                        background: green;
+                    }
+
+                    &__inner4 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 25%;
+                        height: 25%;
+                        border: 2px solid black;
+                        border-radius: 100%;
+                        background: green;
+                    }
+                }
+            }
+        }
+
+        .top__sp__box {
+            opacity: 0.6;
+            position: absolute;
+            top: 5%;
+            left: 1%;
+            width: 28%;
+            height: 36%;
+            background: red;
+
+            &__leftsp {
+                position: absolute;
+                top: 8%;
+                left: 9%;
+                width: 45%;
+                height: 61%;
+                background: blue;
+
+                &::before,
+                &::after {
+                    width: 100%;
+                    height: 0;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    content: "";
+                }
+
+                &:before {
+                    border-bottom: solid calc(3 * var(--unit)) blue;
+                    border-left: solid calc(3 * var(--unit)) transparent;
+                    border-right: solid calc(3 * var(--unit)) transparent;
+                    bottom: 100%;
+                }
+
+                &:after {
+                    border-top: solid calc(3 * var(--unit)) blue;
+                    border-left: solid calc(3 * var(--unit)) transparent;
+                    border-right: solid calc(3 * var(--unit)) transparent;
+                    top: 100%;
+                }
+
+                &__stick {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 120%;
+                    height: 10%;
+                    background: orange;
+                    transform-origin: center;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    border-radius: 50px 50px 50px 50px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 10%;
+                        left: 1%;
+                        width: calc(3 * var(--unit));
+                        height: calc(3 * var(--unit));
+                        background: green;
+                        border-radius: 50px 50px 50px 50px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 10%;
+                        right: 1%;
+                        width: calc(3 * var(--unit));
+                        height: calc(3 * var(--unit));
+                        background: green;
+                        border-radius: 50px 50px 50px 50px;
+                    }
+
+                    &:nth-child(2) {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+
+                }
+
+                &__mesh {
+                    position: absolute;
+                    @extend .transCenter;
+                    width: calc(40 * var(--unit));
+                    height: calc(40 * var(--unit));
+                    border-radius: 100%;
+                    border: calc(2 * var(--unit)) solid #000;
+                    background: red;
+                }
+
+                &__inners {
+                    position: absolute;
+                    @extend .transCenter;
+                    width: calc(40 * var(--unit));
+                    height: calc(40 * var(--unit));
+                    border-radius: 100%;
+                    border: calc(2 * var(--unit)) solid #000;
+                    background: red;
+
+                    &__inner1 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 60%;
+                        height: 60%;
+                        border-radius: 100%;
+                        background: blue;
+                    }
+
+                    &__inner2 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 25%;
+                        height: 25%;
+                        border-radius: 100%;
+                        background: green;
+                    }
+
+                    &__inner3 {
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 20%;
+                        height: 20%;
+                        border-radius: 100%;
+                        border: calc(1 * var(--unit)) solid #000;
+                        background: green;
+                    }
+                }
+
+            }
+
+            &__rightsp {
+                position: absolute;
+                top: 8%;
+                right: 10%;
+                width: 35%;
+                height: 61%;
+                background: blue;
+
+                &::before,
+                &::after {
+                    width: 100%;
+                    height: 0;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    content: "";
+                }
+
+                &:before {
+                    border-bottom: solid calc(3 * var(--unit)) blue;
+                    border-left: solid calc(3 * var(--unit)) transparent;
+                    border-right: solid calc(3 * var(--unit)) transparent;
+                    bottom: 100%;
+                }
+
+                &:after {
+                    border-top: solid calc(3 * var(--unit)) blue;
+                    border-left: solid calc(3 * var(--unit)) transparent;
+                    border-right: solid calc(3 * var(--unit)) transparent;
+                    top: 100%;
+                }
+
+                &__mid {
+                    position: absolute;
+                    @extend .transCenter;
+                    width: 44%;
+                    height: 113%;
+                    background: orange;
+                    z-index: 3;
+
+                    &__mesh {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 70%;
+                        background: green;
+                    }
+                }
+
+                &__screw {
+                    position: absolute;
+                    width: calc(5 * var(--unit));
+                    height: calc(5 * var(--unit));
+                    border-radius: 100%;
+                    border: calc(1 * var(--unit)) solid #000;
+                    background: orange;
+
+                    &:nth-child(5) {
+                        top: -1%;
+                        left: 7%;
+                    }
+
+                    &:nth-child(2) {
+                        top: -1%;
+                        right: 7%;
+                    }
+
+                    &:nth-child(3) {
+                        bottom: -1%;
+                        right: 7%;
+                    }
+
+                    &:nth-child(4) {
+                        bottom: -1%;
+                        left: 7%;
+                    }
+                }
+
+            }
+
+            &__btm {
+                position: absolute;
+                bottom: 3%;
+                right: 10%;
+                width: 80%;
+                height: 19%;
+                background: blue;
+
+                &__shade {
+                    position: absolute;
+                    @extend .transCenter;
+                    width: 90%;
+                    height: 90%;
+                    background: red;
+                }
+            }
+        }
+    }
+
+
+}
