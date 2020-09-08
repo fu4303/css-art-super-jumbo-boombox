@@ -6,7 +6,7 @@
 }
 
 :root {
-  --size: 100;
+  --size: 70;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -29,7 +29,7 @@ img,
           transform: translate(-50%, -50%);
 }
 
-.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade {
+.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -50,6 +50,8 @@ img,
   width: 96%;
   height: 72%;
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#47423F), to(#332F2D));
+  background: linear-gradient(#47423F, #332F2D);
 }
 
 .boombox .bb__body .big__sp {
@@ -60,32 +62,61 @@ img,
   height: 59%;
 }
 
+.boombox .bb__body .big__sp::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 3%;
+  background: #1E1B1B;
+}
+
 .boombox .bb__body .big__sp__box {
   position: absolute;
-  top: 0%;
-  left: 5%;
+  top: 2%;
+  left: 4%;
   width: 92%;
   height: 93%;
   overflow: hidden;
 }
 
 .boombox .bb__body .big__sp__box__out {
-  opacity: 0.5;
   position: absolute;
   top: -5%;
   left: -7%;
   width: calc(106 * var(--unit));
   height: calc(106 * var(--unit));
   border-radius: 100%;
-  background: red;
   overflow: hidden;
+  background: linear-gradient(45deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
 }
 
 .boombox .bb__body .big__sp__box__out__edge {
   position: absolute;
   width: 15%;
   height: 7%;
-  background: blue;
+  background: #929292;
+}
+
+.boombox .bb__body .big__sp__box__out__edge::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(10deg, transparent 0 50%, #DFDFDF 50% 100%);
+}
+
+.boombox .bb__body .big__sp__box__out__edge::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(-10deg, #6C6C6C 0 50%, transparent 50% 100%);
 }
 
 .boombox .bb__body .big__sp__box__out__edge:nth-child(1) {
@@ -102,11 +133,27 @@ img,
           transform: rotate(135deg);
 }
 
+.boombox .bb__body .big__sp__box__out__edge:nth-child(2)::before {
+  background: linear-gradient(10deg, transparent 0 50%, #6C6C6C 50% 100%);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(2)::after {
+  background: linear-gradient(-10deg, #DFDFDF 0 50%, transparent 50% 100%);
+}
+
 .boombox .bb__body .big__sp__box__out__edge:nth-child(3) {
   bottom: 13%;
   right: 10%;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(3)::before {
+  background: linear-gradient(10deg, transparent 0 50%, #6C6C6C 50% 100%);
+}
+
+.boombox .bb__body .big__sp__box__out__edge:nth-child(3)::after {
+  background: linear-gradient(-10deg, #DFDFDF 0 50%, transparent 50% 100%);
 }
 
 .boombox .bb__body .big__sp__box__out__edge:nth-child(4) {
@@ -116,32 +163,13 @@ img,
           transform: rotate(-45deg);
 }
 
-.boombox .bb__body .big__sp__box__out__edge::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(10deg, transparent 0 50%, orange 50% 100%);
-}
-
-.boombox .bb__body .big__sp__box__out__edge::after {
-  content: "";
-  position: absolute;
-  top: -30%;
-  left: 0%;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(-10deg, orange 0 50%, transparent 50% 100%);
-}
-
 .boombox .bb__body .big__sp__box__out__edge__screw {
   position: absolute;
   width: calc(4 * var(--unit));
   height: calc(4 * var(--unit));
   border-radius: 100%;
-  background: orange;
+  border: calc(1 * var(--unit)) solid #DFDFDF;
+  background: #929292;
 }
 
 .boombox .bb__body .big__sp__box__out__inner1 {
@@ -149,7 +177,7 @@ img,
   width: 80%;
   height: 80%;
   border-radius: 100%;
-  background: blue;
+  background: #393636;
 }
 
 .boombox .bb__body .big__sp__box__out__inner2 {
@@ -157,34 +185,46 @@ img,
   width: 54%;
   height: 54%;
   border-radius: 100%;
-  background: orange;
+  background: #4E4B4A;
 }
 
 .boombox .bb__body .big__sp__box__out__inner3 {
   position: absolute;
-  width: 27%;
-  height: 27%;
+  width: 28%;
+  height: 28%;
   border-radius: 100%;
-  background: green;
+  background: #929292;
 }
 
 .boombox .bb__body .big__sp__box__out__inner4 {
   position: absolute;
   width: 25%;
   height: 25%;
-  border: 2px solid black;
+  border: calc(2 * var(--unit)) solid #393636;
   border-radius: 100%;
-  background: green;
+  background: linear-gradient(45deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
+}
+
+.boombox .bb__body .big__sp__box__out__mesh {
+  opacity: 0.7;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border: calc(1 * var(--unit)) solid #B74444;
+  border-radius: 100%;
+  background-image: radial-gradient(transparent 50%, #201D1C 50%);
+  background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
 }
 
 .boombox .bb__body .top__sp__box {
-  opacity: 0.6;
   position: absolute;
-  top: 5%;
-  left: 1%;
+  top: 4%;
+  left: 0.5%;
   width: 28%;
   height: 36%;
-  background: red;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #2c2927), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, #2c2927), color-stop(50%, #47423F));
+  background-image: linear-gradient(-90deg, #2c2927 50%, transparent 50%), linear-gradient(#2c2927 50%, #47423F 50%);
+  background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
 }
 
 .boombox .bb__body .top__sp__box__leftsp {
@@ -193,7 +233,8 @@ img,
   left: 9%;
   width: 45%;
   height: 61%;
-  background: blue;
+  background: -webkit-gradient(linear, left bottom, left top, from(#929292), color-stop(#6C6C6C), color-stop(#929292), color-stop(#CFCFCF), color-stop(#DFDFDF), to(#CFCFCF));
+  background: linear-gradient(0deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
 }
 
 .boombox .bb__body .top__sp__box__leftsp::before, .boombox .bb__body .top__sp__box__leftsp::after {
@@ -206,17 +247,17 @@ img,
 }
 
 .boombox .bb__body .top__sp__box__leftsp:before {
-  border-bottom: solid calc(3 * var(--unit)) blue;
+  border-bottom: solid calc(3 * var(--unit)) #CFCFCF;
   border-left: solid calc(3 * var(--unit)) transparent;
   border-right: solid calc(3 * var(--unit)) transparent;
   bottom: 100%;
 }
 
 .boombox .bb__body .top__sp__box__leftsp:after {
-  border-top: solid calc(3 * var(--unit)) blue;
+  border-top: solid calc(3 * var(--unit)) #929292;
   border-left: solid calc(3 * var(--unit)) transparent;
   border-right: solid calc(3 * var(--unit)) transparent;
-  top: 100%;
+  top: 99%;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__stick {
@@ -225,12 +266,13 @@ img,
   left: 50%;
   width: 120%;
   height: 10%;
-  background: orange;
+  background: #47423F;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 50px 50px 50px 50px;
+  z-index: 3;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__stick::before {
@@ -240,7 +282,7 @@ img,
   left: 1%;
   width: calc(3 * var(--unit));
   height: calc(3 * var(--unit));
-  background: green;
+  background: #000;
   border-radius: 50px 50px 50px 50px;
 }
 
@@ -251,7 +293,7 @@ img,
   right: 1%;
   width: calc(3 * var(--unit));
   height: calc(3 * var(--unit));
-  background: green;
+  background: #000;
   border-radius: 50px 50px 50px 50px;
 }
 
@@ -262,11 +304,14 @@ img,
 
 .boombox .bb__body .top__sp__box__leftsp__mesh {
   position: absolute;
+  opacity: 0.7;
   width: calc(40 * var(--unit));
   height: calc(40 * var(--unit));
   border-radius: 100%;
   border: calc(2 * var(--unit)) solid #000;
-  background: red;
+  background-image: radial-gradient(transparent 50%, #201D1C 50%);
+  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+  z-index: 3;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners {
@@ -275,7 +320,8 @@ img,
   height: calc(40 * var(--unit));
   border-radius: 100%;
   border: calc(2 * var(--unit)) solid #000;
-  background: red;
+  background: #393636;
+  z-index: 3;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners__inner1 {
@@ -283,7 +329,7 @@ img,
   width: 60%;
   height: 60%;
   border-radius: 100%;
-  background: blue;
+  background: #4E4B4A;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners__inner2 {
@@ -291,7 +337,7 @@ img,
   width: 25%;
   height: 25%;
   border-radius: 100%;
-  background: green;
+  background: linear-gradient(45deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners__inner3 {
@@ -300,7 +346,7 @@ img,
   height: 20%;
   border-radius: 100%;
   border: calc(1 * var(--unit)) solid #000;
-  background: green;
+  background: #CFCFCF;
 }
 
 .boombox .bb__body .top__sp__box__rightsp {
@@ -309,7 +355,8 @@ img,
   right: 10%;
   width: 35%;
   height: 61%;
-  background: blue;
+  background: -webkit-gradient(linear, left bottom, left top, from(#929292), color-stop(#6C6C6C), color-stop(#929292), color-stop(#CFCFCF), color-stop(#DFDFDF), to(#CFCFCF));
+  background: linear-gradient(0deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
 }
 
 .boombox .bb__body .top__sp__box__rightsp::before, .boombox .bb__body .top__sp__box__rightsp::after {
@@ -322,25 +369,27 @@ img,
 }
 
 .boombox .bb__body .top__sp__box__rightsp:before {
-  border-bottom: solid calc(3 * var(--unit)) blue;
+  border-bottom: solid calc(3 * var(--unit)) #CFCFCF;
   border-left: solid calc(3 * var(--unit)) transparent;
   border-right: solid calc(3 * var(--unit)) transparent;
   bottom: 100%;
 }
 
 .boombox .bb__body .top__sp__box__rightsp:after {
-  border-top: solid calc(3 * var(--unit)) blue;
+  border-top: solid calc(3 * var(--unit)) #929292;
   border-left: solid calc(3 * var(--unit)) transparent;
   border-right: solid calc(3 * var(--unit)) transparent;
-  top: 100%;
+  top: 99%;
 }
 
 .boombox .bb__body .top__sp__box__rightsp__mid {
   position: absolute;
+  top: 49%;
   width: 44%;
-  height: 113%;
-  background: orange;
+  height: 115%;
+  background: #47423F;
   z-index: 3;
+  border: calc(3 * var(--unit)) #201D1C #000;
 }
 
 .boombox .bb__body .top__sp__box__rightsp__mid__mesh {
@@ -348,16 +397,18 @@ img,
   top: 0;
   width: 100%;
   height: 70%;
-  background: green;
+  background-image: radial-gradient(transparent 40%, #201D1C 50%);
+  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
 }
 
 .boombox .bb__body .top__sp__box__rightsp__screw {
   position: absolute;
-  width: calc(5 * var(--unit));
-  height: calc(5 * var(--unit));
+  width: calc(4 * var(--unit));
+  height: calc(4 * var(--unit));
   border-radius: 100%;
   border: calc(1 * var(--unit)) solid #000;
-  background: orange;
+  background: #47423F;
+  z-index: 3;
 }
 
 .boombox .bb__body .top__sp__box__rightsp__screw:nth-child(5) {
@@ -386,13 +437,62 @@ img,
   right: 10%;
   width: 80%;
   height: 19%;
-  background: blue;
+  background: linear-gradient(45deg, #929292, #6C6C6C, #929292, #CFCFCF, #DFDFDF, #CFCFCF);
 }
 
 .boombox .bb__body .top__sp__box__btm__shade {
   position: absolute;
   width: 90%;
-  height: 90%;
-  background: red;
+  height: 80%;
+  background: #363834;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #141212), color-stop(40%, #363834), color-stop(80%, #141212));
+  background: linear-gradient(#141212 0 20%, #363834 40% 60%, #141212 80% 100%);
+}
+
+.boombox .bb__body .top__sp__box__btm__light {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: calc(3 * var(--unit));
+  height: calc(3 * var(--unit));
+  border-radius: 100%;
+  background: radial-gradient(#d48d8d 0 30%, #B74444 40% 60%);
+}
+
+.boombox .bb__body .top__sp__box__btm__light:last-child {
+  left: 15%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(1) {
+  left: 15%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(2) {
+  left: 25%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(3) {
+  left: 35%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(4) {
+  left: 45%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(5) {
+  left: 55%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(6) {
+  left: 65%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(7) {
+  left: 75%;
+}
+
+.boombox .bb__body .top__sp__box__btm__light:nth-child(8) {
+  left: 85%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,26 @@
+///COLORS
+
+$body: #47423F;
+$body2: #332F2D;
+$body3: #1E1B1B;
+
+$silver1: #DFDFDF;
+$silver2: #CFCFCF;
+$silver3: #929292;
+$silver4: #6C6C6C;
+
+$red1: #B74444;
+
+$mesh: #201D1C;
+$topspmesh: #363030;
+$speakerInner: #393636;
+$speakerInner2: #4E4B4A;
+
+$btmLight1: #363834;
+$btmLight2: #141212;
+
+
+
 *,
 *::after,
 *::before {
@@ -5,7 +28,7 @@
 }
 
 :root {
-    --size: 100;
+    --size: 70;
     --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -41,56 +64,81 @@ img,
     overflow: hidden;
 
     .bb__body {
-        // opacity: 0.5;
         position: absolute;
         top: 14%;
         left: 2%;
         width: 96%;
         height: 72%;
-        // background: pink;
         overflow: hidden;
+        background: linear-gradient($body, $body2);
 
         .big__sp {
-            // opacity: 0.6;
             position: absolute;
             bottom: 0%;
             left: 0%;
             width: 29%;
             height: 59%;
-            // background: red;
+            // background: linear-gradient($body, $body2);
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+                width: 100%;
+                height: 3%;
+                background: $body3;
+            }
 
             &__box {
-                // opacity: 0.5;
                 position: absolute;
-                top: 0%;
-                left: 5%;
+                top: 2%;
+                left: 4%;
                 width: 92%;
                 height: 93%;
-                // background: blue;
                 overflow: hidden;
 
 
-
+                //SPEAKER RIM
                 &__out {
-                    opacity: 0.5;
                     position: absolute;
                     top: -5%;
                     left: -7%;
                     width: calc(106 * var(--unit));
                     height: calc(106 * var(--unit));
                     border-radius: 100%;
-                    background: red;
                     overflow: hidden;
+                    background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
 
 
                     //SCREWS 
 
                     &__edge {
                         position: absolute;
-
                         width: 15%;
                         height: 7%;
-                        background: blue;
+                        background: $silver3;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 0%;
+                            width: 100%;
+                            height: 40%;
+                            background: linear-gradient(10deg, transparent 0 50%, $silver1 50% 100%);
+                        }
+
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -30%;
+                            left: 0%;
+                            width: 100%;
+                            height: 40%;
+                            background: linear-gradient(-10deg, $silver4 0 50%, transparent 50% 100%);
+                        }
 
 
                         &:nth-child(1) {
@@ -103,6 +151,15 @@ img,
                             top: 13%;
                             right: 10%;
                             transform: rotate(135deg);
+
+                            &::before {
+                                background: linear-gradient(10deg, transparent 0 50%, $silver4 50% 100%);
+                            }
+
+
+                            &::after {
+                                background: linear-gradient(-10deg, $silver1 0 50%, transparent 50% 100%);
+                            }
                         }
 
 
@@ -110,34 +167,25 @@ img,
                             bottom: 13%;
                             right: 10%;
                             transform: rotate(-135deg);
+
+                            &::before {
+                                background: linear-gradient(10deg, transparent 0 50%, $silver4 50% 100%);
+                            }
+
+
+                            &::after {
+                                background: linear-gradient(-10deg, $silver1 0 50%, transparent 50% 100%);
+                            }
                         }
 
                         &:nth-child(4) {
                             bottom: 13%;
                             left: 10%;
                             transform: rotate(-45deg);
-                        }
 
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 100%;
-                            left: 0%;
-                            width: 100%;
-                            height: 40%;
-                            background: linear-gradient(10deg, transparent 0 50%, orange 50% 100%);
                         }
 
 
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: -30%;
-                            left: 0%;
-                            width: 100%;
-                            height: 40%;
-                            background: linear-gradient(-10deg, orange 0 50%, transparent 50% 100%);
-                        }
 
                         &__screw {
                             position: absolute;
@@ -145,11 +193,12 @@ img,
                             width: calc(4 * var(--unit));
                             height: calc(4 * var(--unit));
                             border-radius: 100%;
-                            background: orange;
+                            border: calc(1 * var(--unit)) solid $silver1;
+                            background: $silver3;
                         }
                     }
 
-                    //SPEAKER RIMS
+                    //SPEAKER Mesh
 
                     &__inner1 {
                         position: absolute;
@@ -157,7 +206,7 @@ img,
                         width: 80%;
                         height: 80%;
                         border-radius: 100%;
-                        background: blue;
+                        background: $speakerInner;
                     }
 
                     &__inner2 {
@@ -166,16 +215,16 @@ img,
                         width: 54%;
                         height: 54%;
                         border-radius: 100%;
-                        background: orange;
+                        background: $speakerInner2;
                     }
 
                     &__inner3 {
                         position: absolute;
                         @extend .transCenter;
-                        width: 27%;
-                        height: 27%;
+                        width: 28%;
+                        height: 28%;
                         border-radius: 100%;
-                        background: green;
+                        background: $silver3;
                     }
 
                     &__inner4 {
@@ -183,22 +232,43 @@ img,
                         @extend .transCenter;
                         width: 25%;
                         height: 25%;
-                        border: 2px solid black;
+                        border: calc(2 * var(--unit)) solid $speakerInner;
                         border-radius: 100%;
-                        background: green;
+                        background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                    }
+
+                    &__mesh {
+                        opacity: 0.7;
+                        position: absolute;
+                        @extend .transCenter;
+                        width: 80%;
+                        height: 80%;
+                        border: calc(1 * var(--unit)) solid $red1;
+                        border-radius: 100%;
+                        background-image:
+                            radial-gradient(transparent 50%, $mesh 50%);
+                        background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
                     }
                 }
             }
         }
 
+        ///TOP SPEAKER
+
         .top__sp__box {
-            opacity: 0.6;
             position: absolute;
-            top: 5%;
-            left: 1%;
+            top: 4%;
+            left: 0.5%;
             width: 28%;
             height: 36%;
-            background: red;
+            background-image:
+                linear-gradient(-90deg, darken($body, 10%) 50%, transparent 50%),
+                linear-gradient(darken($body, 10%) 50%, $body 50%);
+            background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
+            // display: none;
+
+
+            ///TOP LEFT SPEAKER
 
             &__leftsp {
                 position: absolute;
@@ -206,7 +276,7 @@ img,
                 left: 9%;
                 width: 45%;
                 height: 61%;
-                background: blue;
+                background: linear-gradient(0deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
 
                 &::before,
                 &::after {
@@ -219,17 +289,17 @@ img,
                 }
 
                 &:before {
-                    border-bottom: solid calc(3 * var(--unit)) blue;
+                    border-bottom: solid calc(3 * var(--unit)) $silver2;
                     border-left: solid calc(3 * var(--unit)) transparent;
                     border-right: solid calc(3 * var(--unit)) transparent;
                     bottom: 100%;
                 }
 
                 &:after {
-                    border-top: solid calc(3 * var(--unit)) blue;
+                    border-top: solid calc(3 * var(--unit)) $silver3;
                     border-left: solid calc(3 * var(--unit)) transparent;
                     border-right: solid calc(3 * var(--unit)) transparent;
-                    top: 100%;
+                    top: 99%;
                 }
 
                 &__stick {
@@ -238,10 +308,11 @@ img,
                     left: 50%;
                     width: 120%;
                     height: 10%;
-                    background: orange;
+                    background: $body;
                     transform-origin: center;
                     transform: translate(-50%, -50%) rotate(45deg);
                     border-radius: 50px 50px 50px 50px;
+                    z-index: 3;
 
                     &::before {
                         content: "";
@@ -250,7 +321,7 @@ img,
                         left: 1%;
                         width: calc(3 * var(--unit));
                         height: calc(3 * var(--unit));
-                        background: green;
+                        background: #000;
                         border-radius: 50px 50px 50px 50px;
                     }
 
@@ -261,7 +332,7 @@ img,
                         right: 1%;
                         width: calc(3 * var(--unit));
                         height: calc(3 * var(--unit));
-                        background: green;
+                        background: #000;
                         border-radius: 50px 50px 50px 50px;
                     }
 
@@ -273,12 +344,16 @@ img,
 
                 &__mesh {
                     position: absolute;
+                    opacity: 0.7;
                     @extend .transCenter;
                     width: calc(40 * var(--unit));
                     height: calc(40 * var(--unit));
                     border-radius: 100%;
                     border: calc(2 * var(--unit)) solid #000;
-                    background: red;
+                    background-image:
+                        radial-gradient(transparent 50%, $mesh 50%);
+                    background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+                    z-index: 3;
                 }
 
                 &__inners {
@@ -288,7 +363,8 @@ img,
                     height: calc(40 * var(--unit));
                     border-radius: 100%;
                     border: calc(2 * var(--unit)) solid #000;
-                    background: red;
+                    background: $speakerInner;
+                    z-index: 3;
 
                     &__inner1 {
                         position: absolute;
@@ -296,7 +372,7 @@ img,
                         width: 60%;
                         height: 60%;
                         border-radius: 100%;
-                        background: blue;
+                        background: $speakerInner2;
                     }
 
                     &__inner2 {
@@ -305,7 +381,7 @@ img,
                         width: 25%;
                         height: 25%;
                         border-radius: 100%;
-                        background: green;
+                        background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
                     }
 
                     &__inner3 {
@@ -315,11 +391,13 @@ img,
                         height: 20%;
                         border-radius: 100%;
                         border: calc(1 * var(--unit)) solid #000;
-                        background: green;
+                        background: $silver2;
                     }
                 }
 
             }
+
+            ///TOP RIGHT SPEAKER
 
             &__rightsp {
                 position: absolute;
@@ -327,7 +405,7 @@ img,
                 right: 10%;
                 width: 35%;
                 height: 61%;
-                background: blue;
+                background: linear-gradient(0deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
 
                 &::before,
                 &::after {
@@ -340,43 +418,51 @@ img,
                 }
 
                 &:before {
-                    border-bottom: solid calc(3 * var(--unit)) blue;
+                    border-bottom: solid calc(3 * var(--unit)) $silver2;
                     border-left: solid calc(3 * var(--unit)) transparent;
                     border-right: solid calc(3 * var(--unit)) transparent;
                     bottom: 100%;
                 }
 
                 &:after {
-                    border-top: solid calc(3 * var(--unit)) blue;
+                    border-top: solid calc(3 * var(--unit)) $silver3;
                     border-left: solid calc(3 * var(--unit)) transparent;
                     border-right: solid calc(3 * var(--unit)) transparent;
-                    top: 100%;
+                    top: 99%;
+
                 }
 
                 &__mid {
                     position: absolute;
                     @extend .transCenter;
+                    top: 49%;
                     width: 44%;
-                    height: 113%;
-                    background: orange;
+                    height: 115%;
+                    background: $body;
                     z-index: 3;
+                    border: calc(3 * var(--unit)) $mesh #000;
 
                     &__mesh {
                         position: absolute;
                         top: 0;
                         width: 100%;
                         height: 70%;
-                        background: green;
+                        background-image:
+                            radial-gradient(transparent 40%, $mesh 50%);
+                        background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
                     }
                 }
 
+                ///TOP RIGHT SPEAKER SCREWS
+
                 &__screw {
                     position: absolute;
-                    width: calc(5 * var(--unit));
-                    height: calc(5 * var(--unit));
+                    width: calc(4 * var(--unit));
+                    height: calc(4 * var(--unit));
                     border-radius: 100%;
                     border: calc(1 * var(--unit)) solid #000;
-                    background: orange;
+                    background: $body;
+                    z-index: 3;
 
                     &:nth-child(5) {
                         top: -1%;
@@ -407,14 +493,35 @@ img,
                 right: 10%;
                 width: 80%;
                 height: 19%;
-                background: blue;
+                background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
 
                 &__shade {
                     position: absolute;
                     @extend .transCenter;
                     width: 90%;
-                    height: 90%;
-                    background: red;
+                    height: 80%;
+                    background: $btmLight1;
+                    background: linear-gradient($btmLight2 0 20%, $btmLight1 40% 60%, $btmLight2 80% 100%);
+                }
+
+                &__light {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    width: calc(3 * var(--unit));
+                    height: calc(3 * var(--unit));
+                    border-radius: 100%;
+                    background: radial-gradient(lighten($red1, 20%) 0 30%, $red1 40% 60%);
+
+                    &:last-child {
+                        left: 15%;
+                    }
+
+                    @for $i from 1 to 9 {
+                        &:nth-child(#{$i}) {
+                            left: 5% + (10% * $i);
+                        }
+                    }
                 }
             }
         }
