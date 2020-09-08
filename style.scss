@@ -3,6 +3,7 @@
 $body: #47423F;
 $body2: #332F2D;
 $body3: #1E1B1B;
+$bodyShadow: #1E1A1B;
 
 $silver1: #DFDFDF;
 $silver2: #CFCFCF;
@@ -39,7 +40,7 @@ body {
 
 img {
     height: calc(var(--size) * 1vmin);
-    opacity: 0.8;
+    // opacity: 0.8;
 }
 
 img,
@@ -70,7 +71,7 @@ img,
         width: 96%;
         height: 72%;
         overflow: hidden;
-        background: linear-gradient($body, $body2);
+        // background: linear-gradient($body 0% 2%, $body2 3% 97%, $body3 98% 100%);
 
         .big__sp {
             position: absolute;
@@ -78,7 +79,7 @@ img,
             left: 0%;
             width: 29%;
             height: 59%;
-            // background: linear-gradient($body, $body2);
+
 
             &::after {
                 content: "";
@@ -99,6 +100,7 @@ img,
                 overflow: hidden;
 
 
+
                 //SPEAKER RIM
                 &__out {
                     position: absolute;
@@ -109,6 +111,7 @@ img,
                     border-radius: 100%;
                     overflow: hidden;
                     background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                    filter: drop-shadow(0 2px 0.8px $bodyShadow);
 
 
                     //SCREWS 
@@ -126,7 +129,7 @@ img,
                             left: 0%;
                             width: 100%;
                             height: 40%;
-                            background: linear-gradient(10deg, transparent 0 50%, $silver1 50% 100%);
+                            background: linear-gradient(10deg, transparent 0 50%, $silver1 50% 60%, $silver3 100%);
                         }
 
 
@@ -137,7 +140,7 @@ img,
                             left: 0%;
                             width: 100%;
                             height: 40%;
-                            background: linear-gradient(-10deg, $silver4 0 50%, transparent 50% 100%);
+                            background: linear-gradient(-10deg, $silver4 0, $silver3 50%, transparent 50% 100%);
                         }
 
 
@@ -153,12 +156,12 @@ img,
                             transform: rotate(135deg);
 
                             &::before {
-                                background: linear-gradient(10deg, transparent 0 50%, $silver4 50% 100%);
+                                background: linear-gradient(10deg, transparent 0 50%, $silver3 50% 60%, $silver4 100%);
                             }
 
 
                             &::after {
-                                background: linear-gradient(-10deg, $silver1 0 50%, transparent 50% 100%);
+                                background: linear-gradient(-10deg, $silver1 0 20%, $silver2 50%, transparent 50% 100%);
                             }
                         }
 
@@ -169,12 +172,12 @@ img,
                             transform: rotate(-135deg);
 
                             &::before {
-                                background: linear-gradient(10deg, transparent 0 50%, $silver4 50% 100%);
+                                background: linear-gradient(10deg, transparent 0 50%, $silver3 50% 60%, $silver4 100%);
                             }
 
 
                             &::after {
-                                background: linear-gradient(-10deg, $silver1 0 50%, transparent 50% 100%);
+                                background: linear-gradient(-10deg, $silver3 0, $silver1 50%, transparent 50% 100%);
                             }
                         }
 
@@ -182,6 +185,15 @@ img,
                             bottom: 13%;
                             left: 10%;
                             transform: rotate(-45deg);
+
+                            &::before {
+                                background: linear-gradient(10deg, transparent 0 50%, $silver1 50% 60%, $silver3 100%);
+                            }
+
+
+                            &::after {
+                                background: linear-gradient(-10deg, $silver4 0, $silver3 50%, transparent 50% 100%);
+                            }
 
                         }
 
@@ -248,6 +260,7 @@ img,
                         background-image:
                             radial-gradient(transparent 50%, $mesh 50%);
                         background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
+                        box-shadow: 0 2px 2px -1px $bodyShadow;
                     }
                 }
             }
@@ -258,14 +271,24 @@ img,
         .top__sp__box {
             position: absolute;
             top: 4%;
-            left: 0.5%;
-            width: 28%;
+            left: 1%;
+            width: 27%;
             height: 36%;
             background-image:
                 linear-gradient(-90deg, darken($body, 10%) 50%, transparent 50%),
                 linear-gradient(darken($body, 10%) 50%, $body 50%);
             background-size: calc(2 * var(--unit)) calc(2 * var(--unit));
+            box-shadow: 0 3px 2px -1px $bodyShadow;
             // display: none;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, $body3, $body);
+                opacity: 0.4;
+            }
 
 
             ///TOP LEFT SPEAKER
@@ -277,6 +300,7 @@ img,
                 width: 45%;
                 height: 61%;
                 background: linear-gradient(0deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                filter: drop-shadow(0 2px 0.8px $bodyShadow);
 
                 &::before,
                 &::after {
@@ -313,6 +337,7 @@ img,
                     transform: translate(-50%, -50%) rotate(45deg);
                     border-radius: 50px 50px 50px 50px;
                     z-index: 3;
+                    box-shadow: 0 2px 1px 0px $bodyShadow inset;
 
                     &::before {
                         content: "";
@@ -344,12 +369,12 @@ img,
 
                 &__mesh {
                     position: absolute;
-                    opacity: 0.7;
+                    opacity: 0.6;
                     @extend .transCenter;
                     width: calc(40 * var(--unit));
                     height: calc(40 * var(--unit));
                     border-radius: 100%;
-                    border: calc(2 * var(--unit)) solid #000;
+                    border: calc(1 * var(--unit)) solid $silver1;
                     background-image:
                         radial-gradient(transparent 50%, $mesh 50%);
                     background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
@@ -362,9 +387,9 @@ img,
                     width: calc(40 * var(--unit));
                     height: calc(40 * var(--unit));
                     border-radius: 100%;
-                    border: calc(2 * var(--unit)) solid #000;
                     background: $speakerInner;
                     z-index: 3;
+                    box-shadow: 0 2px 1px -1px $bodyShadow;
 
                     &__inner1 {
                         position: absolute;
@@ -381,7 +406,7 @@ img,
                         width: 25%;
                         height: 25%;
                         border-radius: 100%;
-                        background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                        background: linear-gradient(45deg, $silver4, $silver3, $silver2, $silver1, );
                     }
 
                     &__inner3 {
@@ -390,8 +415,8 @@ img,
                         width: 20%;
                         height: 20%;
                         border-radius: 100%;
-                        border: calc(1 * var(--unit)) solid #000;
-                        background: $silver2;
+                        border: calc(1 * var(--unit)) solid $body2;
+                        background: linear-gradient(45deg, $silver4, $silver3, $silver2, $silver1, );
                     }
                 }
 
@@ -406,6 +431,8 @@ img,
                 width: 35%;
                 height: 61%;
                 background: linear-gradient(0deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                filter: drop-shadow(0 2px 0.8px $bodyShadow);
+
 
                 &::before,
                 &::after {
@@ -430,6 +457,7 @@ img,
                     border-right: solid calc(3 * var(--unit)) transparent;
                     top: 99%;
 
+
                 }
 
                 &__mid {
@@ -438,7 +466,7 @@ img,
                     top: 49%;
                     width: 44%;
                     height: 115%;
-                    background: $body;
+                    background: $body2;
                     z-index: 3;
                     border: calc(3 * var(--unit)) $mesh #000;
 
@@ -450,6 +478,7 @@ img,
                         background-image:
                             radial-gradient(transparent 40%, $mesh 50%);
                         background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+                        box-shadow: 0 3px 2px -1px $bodyShadow;
                     }
                 }
 
@@ -494,6 +523,7 @@ img,
                 width: 80%;
                 height: 19%;
                 background: linear-gradient(45deg, $silver3, $silver4, $silver3, $silver2, $silver1, $silver2, );
+                filter: drop-shadow(0 2px 0.8px $bodyShadow);
 
                 &__shade {
                     position: absolute;
