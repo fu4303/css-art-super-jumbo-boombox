@@ -6,9 +6,11 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Document
     body
-        img(src="/boombox.jpg", alt="")
+        //- img(src="/boombox.jpg", alt="")
         .boombox
             .bb__body
+
+                - for (var $i = 0; $i < 2; ++$i) {
                 .big__sp
                     .big__sp__box                       
                         .big__sp__box__out
@@ -21,7 +23,7 @@ html(lang="en")
                             .big__sp__box__out__edge
                                 .big__sp__box__out__edge__screw
                                 
-
+                            .big__sp__box__out__outline
                             .big__sp__box__out__inner1
                             .big__sp__box__out__inner2
                             .big__sp__box__out__inner3
@@ -55,6 +57,7 @@ html(lang="en")
                         .top__sp__box__btm__light
                         .top__sp__box__btm__light
                         .top__sp__box__btm__light
+                - }
 
                 .middle
                     .middle__section1
