@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 ///COLORS
 
 $body: #47423F;
@@ -20,7 +22,18 @@ $speakerInner2: #4E4B4A;
 $btmLight1: #363834;
 $btmLight2: #141212;
 
-$sc5body: #585860;
+$sc4bodylight: #3B3A3D;
+$sc4body: #30292A;
+$sc4shadow: #242425;
+$sc4sw1: #E7F8FA;
+$sc4sw2: #D2DEE1;
+$sc4red1: #DC7479;
+$sc4red2: #F25452;
+$sc4red3: #E25152;
+
+$sc5body1: #A4A4B2;
+$sc5body2: #585860;
+$sc5body3: #2E2D33;
 $sc5red: #D4BBC1;
 $sc5box: #2E292A;
 $sc5eqshadow1: #0E0E10;
@@ -571,8 +584,6 @@ img,
             left: 29.5%;
             width: 41%;
             height: 100%;
-            // background: red;
-            border: 1px solid red;
 
             &__section1 {
                 position: absolute;
@@ -589,7 +600,7 @@ img,
                 left: 0%;
                 width: 100%;
                 height: 14%;
-                background: orange;
+                // background: orange;
             }
 
             &__section3 {
@@ -598,7 +609,7 @@ img,
                 left: 0%;
                 width: 100%;
                 height: 22.5%;
-                background: green;
+
             }
 
             &__section4 {
@@ -607,7 +618,78 @@ img,
                 left: 0%;
                 width: 100%;
                 height: 9%;
-                background: blue;
+                background: linear-gradient(-45deg, $sc4bodylight, $sc4body);
+                box-shadow: 0px 2px 1px 0px $sc4bodylight inset,
+                    2px 0 2px 1px $sc4shadow inset,
+                    0 -5px 1px $sc4shadow inset;
+
+                &__red {
+                    position: absolute;
+                    top: 35%;
+                    left: 45%;
+                    width: 10.5%;
+                    height: 27%;
+                    background: $sc4red2;
+                    border-radius: 2px;
+                    filter: drop-shadow(0 -3px 1px $bodyShadow);
+
+                    &__grip {
+                        position: absolute;
+                        @extend .transCenter;
+                        top: 60%;
+                        width: 95%;
+                        height: 60%;
+                        border: 1px solid $sc4red3;
+                        background: linear-gradient(transparent 0 50%, $sc4red3 50% 100%),
+                            linear-gradient(90deg, transparent 0 50%, $sc4red3 50% 100%);
+                        background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+
+                    }
+                }
+
+                &__switches {
+                    position: absolute;
+                    top: 10%;
+                    left: 5%;
+                    width: 32%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: space-between;
+                    box-shadow: 0 5px 3px -1px $bodyShadow,
+                        0 10px 2px -1px $bodyShadow,
+                        0 15px 3px -2px $bodyShadow,
+                        0 17px 10px -2px $bodyShadow;
+
+                    &:nth-child(2n) {
+                        left: 64%;
+                    }
+
+                    &__sw {
+                        width: (95 /6) + %;
+                        height: 100%;
+                        background: $sc4sw1;
+                        position: relative;
+                        box-shadow: 0px 5px 1px 0px lighten($sc4sw1, 30%) inset,
+                            0 -3px 2px darken($sc4sw2, 40%) inset;
+
+                        &__grip {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 90%;
+                            height: 55%;
+                            border: 1px solid $sc4sw2;
+                            background: linear-gradient(transparent 0 50%, $sc4sw2 50% 100%),
+                                linear-gradient(90deg, transparent 0 50%, $sc4sw2 50% 100%);
+                            background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+
+
+                        }
+                    }
+                }
+
+
             }
 
             &__section5 {
@@ -617,7 +699,10 @@ img,
                 width: 100%;
                 height: 26%;
 
-                background: $sc5body;
+                background: linear-gradient(20deg, $sc5body3, $sc5body2 55% 60%, $sc5body3);
+                box-shadow: 0px 1px 1px 0px $sc5body2 inset,
+                    2px 0 2px 1px $sc5body3 inset,
+                    0 3px 3px $sc5body3 inset;
 
                 &__center__lines {
                     position: absolute;
@@ -703,6 +788,7 @@ img,
                     width: 2.5%;
                     height: 70%;
                     background: linear-gradient($sc5eqshadow1 0 15%, $sc5eqshadow2 20% 70%, $sc5eqshadow3);
+                    overflow: hidden;
 
 
 
@@ -725,7 +811,31 @@ img,
                         width: 100%;
                         height: 40%;
                         background: linear-gradient(0deg, $silver2 0% 15%, $silver4 20% 23%, $silver1, $silver2, $silver3 70% 72%, $silver2, );
-                        box-shadow: 0 3px 2px -1px $bodyShadow;
+                        box-shadow: 0 8px 5px -1px $sc5eqshadow3;
+                    }
+                }
+
+                &__karaoke {
+                    position: absolute;
+                    bottom: 12%;
+                    right: 2%;
+                    width: 7%;
+                    height: 23%;
+                    background: $sc5red;
+
+
+                    &::after {
+                        content: "karaoke";
+                        position: absolute;
+                        top: 40%;
+                        right: -25%;
+                        width: 150%;
+                        height: 40%;
+                        background: $sc5body2;
+                        color: #fff;
+                        font-family: 'Fjalla One', sans-serif;
+                        text-align: center;
+                        transform: scaleX(0.8);
                     }
                 }
 
@@ -742,7 +852,7 @@ img,
                     &__eq {
                         width: 4%;
                         height: 100%;
-                        background: linear-gradient($sc5eqshadow3 0 40%, $sc5eqshadow2 50% 60%, $sc5eqshadow3);
+                        background: linear-gradient($sc5eqshadow3 0 10%, $sc5eqshadow2 20% 70%, $sc5eqshadow3);
                         overflow: hidden;
 
                         &__lv {
@@ -750,7 +860,7 @@ img,
                             width: 100%;
                             height: 40%;
                             background: linear-gradient(0deg, $silver2 0% 15%, $silver4 20% 23%, $silver1, $silver2, $silver3 70% 72%, $silver2);
-                            box-shadow: 0 3px 2px -1px $bodyShadow;
+                            box-shadow: 0 8px 5px -1px $sc5eqshadow3;
                         }
 
                     }
@@ -766,7 +876,6 @@ img,
                     height: 35%;
                     border-radius: calc(1 * var(--unit));
                     border: calc(0.2 * var(--unit)) solid #fff;
-                    // background: red;
                     overflow: hidden;
 
                     &:nth-last-child(2) {
@@ -777,7 +886,7 @@ img,
                         position: absolute;
                         top: 0%;
                         left: 0%;
-                        width: 100%;
+                        width: 99%;
                         height: 80%;
                         background: $sc5box;
                     }

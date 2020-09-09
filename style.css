@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 *,
 *::after,
 *::before {
@@ -30,7 +31,7 @@ img,
           transform: translate(-50%, -50%);
 }
 
-.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
+.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section4__red__grip, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -535,7 +536,6 @@ img,
   left: 29.5%;
   width: 41%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .boombox .bb__body .middle__section1 {
@@ -553,7 +553,6 @@ img,
   left: 0%;
   width: 100%;
   height: 14%;
-  background: orange;
 }
 
 .boombox .bb__body .middle__section3 {
@@ -562,7 +561,6 @@ img,
   left: 0%;
   width: 100%;
   height: 22.5%;
-  background: green;
 }
 
 .boombox .bb__body .middle__section4 {
@@ -571,7 +569,75 @@ img,
   left: 0%;
   width: 100%;
   height: 9%;
-  background: blue;
+  background: linear-gradient(-45deg, #3B3A3D, #30292A);
+  -webkit-box-shadow: 0px 2px 1px 0px #3B3A3D inset, 2px 0 2px 1px #242425 inset, 0 -5px 1px #242425 inset;
+          box-shadow: 0px 2px 1px 0px #3B3A3D inset, 2px 0 2px 1px #242425 inset, 0 -5px 1px #242425 inset;
+}
+
+.boombox .bb__body .middle__section4__red {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  width: 10.5%;
+  height: 27%;
+  background: #F25452;
+  border-radius: 2px;
+  -webkit-filter: drop-shadow(0 -3px 1px #1E1A1B);
+          filter: drop-shadow(0 -3px 1px #1E1A1B);
+}
+
+.boombox .bb__body .middle__section4__red__grip {
+  position: absolute;
+  top: 60%;
+  width: 95%;
+  height: 60%;
+  border: 1px solid #E25152;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(50%, #E25152)), -webkit-gradient(linear, left top, right top, color-stop(0, transparent), color-stop(50%, #E25152));
+  background: linear-gradient(transparent 0 50%, #E25152 50% 100%), linear-gradient(90deg, transparent 0 50%, #E25152 50% 100%);
+  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+}
+
+.boombox .bb__body .middle__section4__switches {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 32%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 5px 3px -1px #1E1A1B, 0 10px 2px -1px #1E1A1B, 0 15px 3px -2px #1E1A1B, 0 17px 10px -2px #1E1A1B;
+          box-shadow: 0 5px 3px -1px #1E1A1B, 0 10px 2px -1px #1E1A1B, 0 15px 3px -2px #1E1A1B, 0 17px 10px -2px #1E1A1B;
+}
+
+.boombox .bb__body .middle__section4__switches:nth-child(2n) {
+  left: 64%;
+}
+
+.boombox .bb__body .middle__section4__switches__sw {
+  width: 15.83333%;
+  height: 100%;
+  background: #E7F8FA;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 1px 0px white inset, 0 -3px 2px #5c818b inset;
+          box-shadow: 0px 5px 1px 0px white inset, 0 -3px 2px #5c818b inset;
+}
+
+.boombox .bb__body .middle__section4__switches__sw__grip {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 55%;
+  border: 1px solid #D2DEE1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(50%, #D2DEE1)), -webkit-gradient(linear, left top, right top, color-stop(0, transparent), color-stop(50%, #D2DEE1));
+  background: linear-gradient(transparent 0 50%, #D2DEE1 50% 100%), linear-gradient(90deg, transparent 0 50%, #D2DEE1 50% 100%);
+  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
 }
 
 .boombox .bb__body .middle__section5 {
@@ -580,7 +646,9 @@ img,
   left: 0%;
   width: 100%;
   height: 26%;
-  background: #585860;
+  background: linear-gradient(20deg, #2E2D33, #585860 55% 60%, #2E2D33);
+  -webkit-box-shadow: 0px 1px 1px 0px #585860 inset, 2px 0 2px 1px #2E2D33 inset, 0 3px 3px #2E2D33 inset;
+          box-shadow: 0px 1px 1px 0px #585860 inset, 2px 0 2px 1px #2E2D33 inset, 0 3px 3px #2E2D33 inset;
 }
 
 .boombox .bb__body .middle__section5__center__lines {
@@ -666,6 +734,7 @@ img,
   height: 70%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0E0E10), color-stop(20%, #38393F), to(#0B0B0D));
   background: linear-gradient(#0E0E10 0 15%, #38393F 20% 70%, #0B0B0D);
+  overflow: hidden;
 }
 
 .boombox .bb__body .middle__section5__big__eq:nth-child(5) {
@@ -688,8 +757,32 @@ img,
   height: 40%;
   background: -webkit-gradient(linear, left bottom, left top, from(#CFCFCF), color-stop(20%, #6C6C6C), color-stop(#DFDFDF), color-stop(#CFCFCF), color-stop(70%, #929292), to(#CFCFCF));
   background: linear-gradient(0deg, #CFCFCF 0% 15%, #6C6C6C 20% 23%, #DFDFDF, #CFCFCF, #929292 70% 72%, #CFCFCF);
-  -webkit-box-shadow: 0 3px 2px -1px #1E1A1B;
-          box-shadow: 0 3px 2px -1px #1E1A1B;
+  -webkit-box-shadow: 0 8px 5px -1px #0B0B0D;
+          box-shadow: 0 8px 5px -1px #0B0B0D;
+}
+
+.boombox .bb__body .middle__section5__karaoke {
+  position: absolute;
+  bottom: 12%;
+  right: 2%;
+  width: 7%;
+  height: 23%;
+  background: #D4BBC1;
+}
+
+.boombox .bb__body .middle__section5__karaoke::after {
+  content: "karaoke";
+  position: absolute;
+  top: 40%;
+  right: -25%;
+  width: 150%;
+  height: 40%;
+  background: #585860;
+  color: #fff;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
 }
 
 .boombox .bb__body .middle__section5__sm {
@@ -709,19 +802,19 @@ img,
 .boombox .bb__body .middle__section5__sm__eq {
   width: 4%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0B0B0D), color-stop(50%, #38393F), to(#0B0B0D));
-  background: linear-gradient(#0B0B0D 0 40%, #38393F 50% 60%, #0B0B0D);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0B0B0D), color-stop(20%, #38393F), to(#0B0B0D));
+  background: linear-gradient(#0B0B0D 0 10%, #38393F 20% 70%, #0B0B0D);
   overflow: hidden;
 }
 
 .boombox .bb__body .middle__section5__sm__eq__lv {
-  margin-top: 18px;
+  margin-top: 33px;
   width: 100%;
   height: 40%;
   background: -webkit-gradient(linear, left bottom, left top, from(#CFCFCF), color-stop(20%, #6C6C6C), color-stop(#DFDFDF), color-stop(#CFCFCF), color-stop(70%, #929292), to(#CFCFCF));
   background: linear-gradient(0deg, #CFCFCF 0% 15%, #6C6C6C 20% 23%, #DFDFDF, #CFCFCF, #929292 70% 72%, #CFCFCF);
-  -webkit-box-shadow: 0 3px 2px -1px #1E1A1B;
-          box-shadow: 0 3px 2px -1px #1E1A1B;
+  -webkit-box-shadow: 0 8px 5px -1px #0B0B0D;
+          box-shadow: 0 8px 5px -1px #0B0B0D;
 }
 
 .boombox .bb__body .middle__section5__left {
@@ -743,7 +836,7 @@ img,
   position: absolute;
   top: 0%;
   left: 0%;
-  width: 100%;
+  width: 99%;
   height: 80%;
   background: #2E292A;
 }
