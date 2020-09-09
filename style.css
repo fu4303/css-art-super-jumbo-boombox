@@ -1,12 +1,13 @@
 *,
 *::after,
 *::before {
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 :root {
-  --size: 70;
+  --size: 120;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -29,7 +30,7 @@ img,
           transform: translate(-50%, -50%);
 }
 
-.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade {
+.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -529,7 +530,6 @@ img,
 }
 
 .boombox .bb__body .middle {
-  opacity: 0.3;
   position: absolute;
   bottom: 0%;
   left: 29.5%;
@@ -579,7 +579,242 @@ img,
   top: 74%;
   left: 0%;
   width: 100%;
+  height: 26%;
+  background: #585860;
+}
+
+.boombox .bb__body .middle__section5__center__lines {
+  position: absolute;
+  width: 48%;
+  height: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(17%, transparent));
+  background: linear-gradient(#fff 0 17%, transparent 17% 100%);
+  background-size: calc(1 * var(--unit)) calc(2 * var(--unit));
+}
+
+.boombox .bb__body .middle__section5__left__lines {
+  position: absolute;
+  left: 19%;
+  width: 2.5%;
+  height: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(17%, transparent));
+  background: linear-gradient(#fff 0 17%, transparent 17% 100%);
+  background-size: calc(1 * var(--unit)) calc(2 * var(--unit));
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section5__left__lines::before {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 100%;
+  height: 0;
+  border-style: solid;
+  border-width: 0 calc(4 * var(--unit)) calc(30 * var(--unit)) 0;
+  border-color: transparent #D4BBC1 transparent transparent;
+}
+
+.boombox .bb__body .middle__section5 .right__lines {
+  left: 86.5%;
+  -webkit-transform: rotateY(180deg) translate(-50%, -50%);
+          transform: rotateY(180deg) translate(-50%, -50%);
+}
+
+.boombox .bb__body .middle__section5__right__lines {
+  position: absolute;
+  left: 80%;
+  width: 2.5%;
+  height: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(17%, transparent));
+  background: linear-gradient(#fff 0 17%, transparent 17% 100%);
+  background-size: calc(1 * var(--unit)) calc(2 * var(--unit));
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section5__right__lines::before {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 100%;
+  height: 0;
+  border-style: solid;
+  border-width: calc(15 * var(--unit)) calc(4 * var(--unit)) 0 0;
+  border-color: #D4BBC1 transparent transparent transparent;
+}
+
+.boombox .bb__body .middle__section5__right__lines::after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  bottom: 7%;
+  left: 0%;
+  width: 100%;
+  height: 0;
+  border-style: solid;
+  border-width: calc(15 * var(--unit)) 0 0 calc(4 * var(--unit));
+  border-color: transparent transparent transparent #D4BBC1;
+}
+
+.boombox .bb__body .middle__section5__big__eq {
+  position: absolute;
+  top: 15%;
+  width: 2.5%;
+  height: 70%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0E0E10), color-stop(20%, #38393F), to(#0B0B0D));
+  background: linear-gradient(#0E0E10 0 15%, #38393F 20% 70%, #0B0B0D);
+}
+
+.boombox .bb__body .middle__section5__big__eq:nth-child(5) {
+  left: 20%;
+}
+
+.boombox .bb__body .middle__section5__big__eq:nth-child(2n) {
+  left: 77%;
+}
+
+.boombox .bb__body .middle__section5__big__eq:nth-child(3n + 1) {
+  left: 85%;
+}
+
+.boombox .bb__body .middle__section5__big__eq__lv {
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#CFCFCF), color-stop(20%, #6C6C6C), color-stop(#DFDFDF), color-stop(#CFCFCF), color-stop(70%, #929292), to(#CFCFCF));
+  background: linear-gradient(0deg, #CFCFCF 0% 15%, #6C6C6C 20% 23%, #DFDFDF, #CFCFCF, #929292 70% 72%, #CFCFCF);
+  -webkit-box-shadow: 0 3px 2px -1px #1E1A1B;
+          box-shadow: 0 3px 2px -1px #1E1A1B;
+}
+
+.boombox .bb__body .middle__section5__sm {
+  position: relative;
+  top: 15%;
+  left: 29%;
+  width: 41%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boombox .bb__body .middle__section5__sm__eq {
+  width: 4%;
   height: 100%;
-  background: pink;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0B0B0D), color-stop(50%, #38393F), to(#0B0B0D));
+  background: linear-gradient(#0B0B0D 0 40%, #38393F 50% 60%, #0B0B0D);
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section5__sm__eq__lv {
+  margin-top: 18px;
+  width: 100%;
+  height: 40%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#CFCFCF), color-stop(20%, #6C6C6C), color-stop(#DFDFDF), color-stop(#CFCFCF), color-stop(70%, #929292), to(#CFCFCF));
+  background: linear-gradient(0deg, #CFCFCF 0% 15%, #6C6C6C 20% 23%, #DFDFDF, #CFCFCF, #929292 70% 72%, #CFCFCF);
+  -webkit-box-shadow: 0 3px 2px -1px #1E1A1B;
+          box-shadow: 0 3px 2px -1px #1E1A1B;
+}
+
+.boombox .bb__body .middle__section5__left {
+  position: absolute;
+  top: 11%;
+  left: 2%;
+  width: 14.5%;
+  height: 35%;
+  border-radius: calc(1 * var(--unit));
+  border: calc(0.2 * var(--unit)) solid #fff;
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section5__left:nth-last-child(2) {
+  top: 49%;
+}
+
+.boombox .bb__body .middle__section5__left__box {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 80%;
+  background: #2E292A;
+}
+
+.boombox .bb__body .middle__section5__left__top {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 13%;
+  background: #fff;
+}
+
+.boombox .bb__body .middle__section5__left__hole {
+  position: absolute;
+  top: 42%;
+  left: 17%;
+  width: calc(3 * var(--unit));
+  height: calc(3 * var(--unit));
+  border-radius: 100%;
+  border: calc(0.7 * var(--unit)) solid #DFDFDF;
+  background: #1E1B1B;
+  -webkit-filter: drop-shadow(0 2px 0.8px #1E1A1B);
+          filter: drop-shadow(0 2px 0.8px #1E1A1B);
+}
+
+.boombox .bb__body .middle__section5__left__hole:nth-last-child(2) {
+  left: 74%;
+}
+
+.boombox .bb__body .middle__section5__right {
+  position: absolute;
+  top: 11%;
+  right: 2%;
+  width: 7%;
+  height: 40%;
+  border-radius: calc(1 * var(--unit));
+  border: calc(0.2 * var(--unit)) solid #fff;
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section5__right__box {
+  position: absolute;
+  top: 22%;
+  left: 0%;
+  width: 99%;
+  height: 65%;
+  background: #2E292A;
+}
+
+.boombox .bb__body .middle__section5__right__top {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 13%;
+  background: #fff;
+}
+
+.boombox .bb__body .middle__section5__right__hole {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  width: calc(3 * var(--unit));
+  height: calc(3 * var(--unit));
+  border-radius: 100%;
+  border: calc(0.8 * var(--unit)) solid #DFDFDF;
+  background: #1E1B1B;
+}
+
+.boombox .bb__body .middle__section5__right__hole:nth-last-child(2) {
+  left: 74%;
 }
 /*# sourceMappingURL=style.css.map */
