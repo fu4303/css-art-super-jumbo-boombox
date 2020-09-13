@@ -104,7 +104,7 @@ img,
     width: 96%;
     height: 72%;
     overflow: hidden;
-    // background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
+    background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
 
     .big__sp {
       position: absolute;
@@ -730,6 +730,29 @@ img,
             height: 100%;
             background: $sc3body2;
 
+            &__glare {
+              position: absolute;
+              top: 0%;
+              left: -5%;
+              width: 20%;
+              height: 100%;
+              background: #fff;
+              opacity: 0.1;
+              transform: skew(-25deg);
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+              box-shadow: 1px 1px 4px -1px lighten($sc3body1, 90%) inset,
+                2px 0 2px -1px darken($sc3body1, 90%) inset,
+                0 -2px 2px -1px darken($sc3body1, 90%) inset;
+            }
+
             &__box {
               position: absolute;
               top: 0%;
@@ -781,6 +804,17 @@ img,
                     background: $sc3body3;
                     overflow: hidden;
 
+                    &__glare {
+                      position: absolute;
+                      opacity: 0.5;
+                      top: 10%;
+                      left: 14%;
+                      width: 45%;
+                      height: 70%;
+                      box-shadow: 2px 2px 2px -1px darken($sc3body3, 50%) inset,
+                        5px 2px 2px 0px darken($sc3body3, 50%) inset;
+                    }
+
                     &__tape1 {
                       position: absolute;
                       top: -2%;
@@ -811,6 +845,8 @@ img,
                         transform-origin: bottom;
                         top: 0%;
                         clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+                        box-shadow: 0px 2px 1px -1px darken($sc3tapehole1, 10%) inset,
+                          2px 0px 1px 0px darken($sc3tapehole1, 10%) inset;
 
                         &:nth-child(2) {
                           transform: translate(-50%, -50%) rotate(120deg * 2);
@@ -896,6 +932,8 @@ img,
                         transform-origin: bottom;
                         top: 0%;
                         clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+                        box-shadow: 0px 2px 1px -1px darken($sc3tapehole1, 10%) inset,
+                          2px 0px 1px 0px darken($sc3tapehole1, 10%) inset;
 
                         &:nth-child(2) {
                           transform: translate(-50%, -50%) rotate(120deg * 2);
@@ -988,6 +1026,28 @@ img,
                 width: (96% / 4);
                 height: 100%;
                 background: $sc3body1;
+              }
+            }
+
+            &:nth-last-child(3) {
+              left: 60%;
+              transform: rotateY(180deg);
+
+              .middle__section3__box__cassets__label2__box {
+                position: absolute;
+                bottom: 6%;
+                left: 38%;
+                width: 54%;
+                height: 5%;
+
+                display: flex;
+                justify-content: space-between;
+
+                .middle__section3__box__cassets__label2 {
+                  width: (96% / 4);
+                  height: 100%;
+                  background: $sc3body1;
+                }
               }
             }
           }

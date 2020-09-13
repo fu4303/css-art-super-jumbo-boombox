@@ -52,6 +52,8 @@ img,
   width: 96%;
   height: 72%;
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#47423f), color-stop(3%, #332f2d), color-stop(99%, #1e1b1b));
+  background: linear-gradient(#47423f 0% 2%, #332f2d 3% 98.3%, #1e1b1b 99% 100%);
 }
 
 .boombox .bb__body .big__sp {
@@ -594,6 +596,29 @@ img,
   background: #443e40;
 }
 
+.boombox .bb__body .middle__section3__box__cassets__glare {
+  position: absolute;
+  top: 0%;
+  left: -5%;
+  width: 20%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.1;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+}
+
+.boombox .bb__body .middle__section3__box__cassets::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 1px 1px 4px -1px white inset, 2px 0 2px -1px black inset, 0 -2px 2px -1px black inset;
+          box-shadow: 1px 1px 4px -1px white inset, 2px 0 2px -1px black inset, 0 -2px 2px -1px black inset;
+}
+
 .boombox .bb__body .middle__section3__box__cassets__box {
   position: absolute;
   top: 0%;
@@ -636,6 +661,17 @@ img,
   overflow: hidden;
 }
 
+.boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__glare {
+  position: absolute;
+  opacity: 0.5;
+  top: 10%;
+  left: 14%;
+  width: 45%;
+  height: 70%;
+  -webkit-box-shadow: 2px 2px 2px -1px #323232 inset, 5px 2px 2px 0px #323232 inset;
+          box-shadow: 2px 2px 2px -1px #323232 inset, 5px 2px 2px 0px #323232 inset;
+}
+
 .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1 {
   position: absolute;
   top: -2%;
@@ -668,6 +704,8 @@ img,
   top: 0%;
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+  -webkit-box-shadow: 0px 2px 1px -1px #8e6a58 inset, 2px 0px 1px 0px #8e6a58 inset;
+          box-shadow: 0px 2px 1px -1px #8e6a58 inset, 2px 0px 1px 0px #8e6a58 inset;
 }
 
 .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__holes:nth-child(2) {
@@ -772,6 +810,8 @@ img,
   top: 0%;
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+  -webkit-box-shadow: 0px 2px 1px -1px #8e6a58 inset, 2px 0px 1px 0px #8e6a58 inset;
+          box-shadow: 0px 2px 1px -1px #8e6a58 inset, 2px 0px 1px 0px #8e6a58 inset;
 }
 
 .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__holes:nth-child(2) {
@@ -878,6 +918,32 @@ img,
 }
 
 .boombox .bb__body .middle__section3__box__cassets__label2__box .middle__section3__box__cassets__label2 {
+  width: 24%;
+  height: 100%;
+  background: #281e1d;
+}
+
+.boombox .bb__body .middle__section3__box__cassets:nth-last-child(3) {
+  left: 60%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.boombox .bb__body .middle__section3__box__cassets:nth-last-child(3) .middle__section3__box__cassets__label2__box {
+  position: absolute;
+  bottom: 6%;
+  left: 38%;
+  width: 54%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boombox .bb__body .middle__section3__box__cassets:nth-last-child(3) .middle__section3__box__cassets__label2__box .middle__section3__box__cassets__label2 {
   width: 24%;
   height: 100%;
   background: #281e1d;
@@ -1138,7 +1204,7 @@ img,
 }
 
 .boombox .bb__body .middle__section5__sm__eq__lv {
-  margin-top: 44px;
+  margin-top: 40px;
   width: 100%;
   height: 40%;
   background: -webkit-gradient(linear, left bottom, left top, from(#cfcfcf), color-stop(20%, #6c6c6c), color-stop(#dfdfdf), color-stop(#cfcfcf), color-stop(70%, #929292), to(#cfcfcf));
