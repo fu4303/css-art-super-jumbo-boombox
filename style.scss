@@ -708,9 +708,9 @@ img,
         left: 0%;
         width: 100%;
         height: 22.5%;
-        // background: linear-gradient(-45deg, $sc4bodylight, $sc4body);
-        // box-shadow: 0px 2px 1px 0px $sc4bodylight inset,
-        //   2px 0 2px 1px $sc4shadow inset, 0 -5px 1px $sc4shadow inset;
+        background: linear-gradient(-45deg, $sc4bodylight, $sc4body);
+        box-shadow: 0px 2px 1px 0px $sc4bodylight inset,
+          2px 0 2px 1px $sc4shadow inset, 0 -5px 1px $sc4shadow inset;
 
         &__box {
           position: absolute;
@@ -740,6 +740,11 @@ img,
               background: #fff;
               opacity: 0.1;
               transform: skew(-25deg);
+
+              &:nth-child(2) {
+                left: 50%;
+                z-index: 5;
+              }
             }
 
             &::after {
@@ -1084,10 +1089,84 @@ img,
           &__mid {
             position: absolute;
             top: 0%;
-            left: 40%;
-            width: 20%;
+            left: 40.5%;
+            width: 19%;
             height: 100%;
-            // background: orange;
+            background: $sc3body1;
+
+            &__glare {
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+              box-shadow: 1px 1px 4px -1px lighten($sc3body1, 90%) inset,
+                2px 0 2px -1px darken($sc3body1, 90%) inset,
+                0 -2px 2px -1px darken($sc3body1, 90%) inset;
+            }
+            // opacity: 0.4;
+            &__box1 {
+              position: absolute;
+              top: 13%;
+              left: 0%;
+              width: 100%;
+              height: 44%;
+              border-bottom: calc(1 * var(--unit)) solid $body2;
+              border-top: calc(1 * var(--unit)) solid $body2;
+              background: $sc3body2;
+            }
+            &__box2 {
+              position: absolute;
+              top: 8%;
+              left: 35%;
+              width: 28%;
+              height: 8%;
+              background: $sc3body1;
+              border: calc(1 * var(--unit)) solid darken($sc3body1, 5%);
+            }
+
+            &__box3 {
+              position: absolute;
+              top: 28%;
+              left: 20%;
+              width: 60%;
+              height: 64%;
+              border: calc(1 * var(--unit)) solid $body2;
+              background: $sc3body1;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 15%;
+                background: $sc3body3;
+              }
+
+              &__lines {
+                position: absolute;
+                @extend .transCenter;
+
+                width: 24%;
+                height: 100%;
+                background: linear-gradient(#fff 0 17%, transparent 17% 100%);
+                background-size: calc(1 * var(--unit)) calc(2 * var(--unit));
+              }
+            }
+
+            &__switch {
+              position: absolute;
+              top: 8%;
+              left: 80%;
+              width: 10%;
+              height: 5%;
+              background: $sc3body3;
+              box-shadow: 1px 1px 4px -1px lighten($sc3body3, 90%) inset,
+                2px 0 2px -1px darken($sc3body3, 90%) inset,
+                0 -2px 2px -1px darken($sc3body3, 90%) inset,
+                0 3px 3px 0px $bodyShadow;
+            }
           }
         }
       }
@@ -1266,6 +1345,7 @@ img,
             $sc5eqshadow2 20% 70%,
             $sc5eqshadow3
           );
+
           overflow: hidden;
 
           &:nth-child(5) {
@@ -1295,7 +1375,10 @@ img,
               $silver3 70% 72%,
               $silver2
             );
-            box-shadow: 0 8px 5px -1px $sc5eqshadow3;
+            box-shadow: 1px 1px 4px -1px $silver1 inset,
+              2px 0 2px -1px $silver1 inset, 0 -2px 2px -1px $silver1 inset,
+              0 8px 5px -1px $sc5eqshadow3;
+            // box-shadow: 0 8px 5px -1px $sc5eqshadow3;
           }
         }
 
@@ -1355,7 +1438,9 @@ img,
                 $silver3 70% 72%,
                 $silver2
               );
-              box-shadow: 0 8px 5px -1px $sc5eqshadow3;
+              box-shadow: 0px 1px 2px -1px $silver1 inset,
+                1px 0 2px -1px $silver1 inset, 0 -1px 1px -1px $silver1 inset,
+                0 8px 5px -1px $sc5eqshadow3;
             }
           }
         }
