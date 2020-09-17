@@ -64,7 +64,7 @@ $sc5eqshadow3: #0b0b0d;
 }
 
 :root {
-  --size: 120;
+  --size: 80;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -95,7 +95,7 @@ img,
 .boombox {
   width: calc(362 * var(--unit));
   height: calc(242 * var(--unit));
-  border: 2px solid red;
+  // border: 2px solid red;
   overflow: hidden;
 
   .bb__body {
@@ -105,7 +105,7 @@ img,
     width: 96%;
     height: 72%;
     overflow: hidden;
-    // background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
+    background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
 
     .big__sp {
       position: absolute;
@@ -690,7 +690,7 @@ img,
         left: 0%;
         width: 100%;
         height: 28.5%;
-        background: red;
+        // background: red;
       }
 
       &__section2 {
@@ -700,6 +700,80 @@ img,
         width: 100%;
         height: 14%;
         // background: orange;
+
+        &__box {
+          position: absolute;
+          top: 5%;
+          left: 2%;
+          width: 97.5%;
+          height: 92%;
+          border: calc(1 * var(--unit)) solid #000;
+
+          &__inner1 {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 12%;
+            height: 100%;
+            border-right: calc(1 * var(--unit)) solid #000;
+
+            &__redbox {
+              position: absolute;
+              @extend .transCenter;
+              width: 79%;
+              height: 80%;
+              border: calc(0.8 * var(--unit)) solid $red1;
+
+              &__btn {
+                position: absolute;
+                @extend .transCenter;
+                top: 15%;
+                width: 90%;
+                height: 23%;
+                border-radius: calc(0.5 * var(--unit));
+                background: $red1;
+              }
+            }
+          }
+
+          &__inner2 {
+            position: absolute;
+            top: 0%;
+            left: 12%;
+            width: 33.3%;
+            height: 100%;
+            border-right: calc(1 * var(--unit)) solid #000;
+
+            &__clock {
+              position: absolute;
+              top: 18%;
+              left: 4%;
+              width: 40%;
+              height: 30%;
+              border-radius: calc(1 * var(--unit));
+              border: solid #ffffff;
+              border-width: calc(1 * var(--unit)) calc(1.3 * var(--unit));
+            }
+          }
+
+          &__inner3 {
+            position: absolute;
+            top: 0%;
+            left: 45.3%;
+            width: 29%;
+            height: 100%;
+            border-right: calc(5 * var(--unit)) solid #000;
+          }
+
+          &__inner4 {
+            position: absolute;
+            top: 0%;
+            left: 74.3%;
+            width: 25.5%;
+            height: 100%;
+            // background: orange;
+          }
+        }
       }
 
       &__section3 {

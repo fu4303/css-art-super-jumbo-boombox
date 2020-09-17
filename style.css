@@ -8,7 +8,7 @@
 }
 
 :root {
-  --size: 120;
+  --size: 80;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -31,7 +31,7 @@ img,
           transform: translate(-50%, -50%);
 }
 
-.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__outline, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section3__box, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__outline, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__outline, .boombox .bb__body .middle__section3__box__mid__box3__lines, .boombox .bb__body .middle__section4__red__grip, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
+.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__outline, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section2__box__inner1__redbox, .boombox .bb__body .middle__section2__box__inner1__redbox__btn, .boombox .bb__body .middle__section3__box, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__outline, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__outline, .boombox .bb__body .middle__section3__box__mid__box3__lines, .boombox .bb__body .middle__section4__red__grip, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -41,7 +41,6 @@ img,
 .boombox {
   width: calc(362 * var(--unit));
   height: calc(242 * var(--unit));
-  border: 2px solid red;
   overflow: hidden;
 }
 
@@ -52,6 +51,8 @@ img,
   width: 96%;
   height: 72%;
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#47423f), color-stop(3%, #332f2d), color-stop(99%, #1e1b1b));
+  background: linear-gradient(#47423f 0% 2%, #332f2d 3% 98.3%, #1e1b1b 99% 100%);
 }
 
 .boombox .bb__body .big__sp {
@@ -554,7 +555,6 @@ img,
   left: 0%;
   width: 100%;
   height: 28.5%;
-  background: red;
 }
 
 .boombox .bb__body .middle__section2 {
@@ -563,6 +563,77 @@ img,
   left: 0%;
   width: 100%;
   height: 14%;
+}
+
+.boombox .bb__body .middle__section2__box {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  width: 97.5%;
+  height: 92%;
+  border: calc(1 * var(--unit)) solid #000;
+}
+
+.boombox .bb__body .middle__section2__box__inner1 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 12%;
+  height: 100%;
+  border-right: calc(1 * var(--unit)) solid #000;
+}
+
+.boombox .bb__body .middle__section2__box__inner1__redbox {
+  position: absolute;
+  width: 79%;
+  height: 80%;
+  border: calc(0.8 * var(--unit)) solid #b74444;
+}
+
+.boombox .bb__body .middle__section2__box__inner1__redbox__btn {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  height: 23%;
+  border-radius: calc(0.5 * var(--unit));
+  background: #b74444;
+}
+
+.boombox .bb__body .middle__section2__box__inner2 {
+  position: absolute;
+  top: 0%;
+  left: 12%;
+  width: 33.3%;
+  height: 100%;
+  border-right: calc(1 * var(--unit)) solid #000;
+}
+
+.boombox .bb__body .middle__section2__box__inner2__clock {
+  position: absolute;
+  top: 18%;
+  left: 4%;
+  width: 40%;
+  height: 30%;
+  border-radius: calc(1 * var(--unit));
+  border: solid #ffffff;
+  border-width: calc(1 * var(--unit)) calc(1.3 * var(--unit));
+}
+
+.boombox .bb__body .middle__section2__box__inner3 {
+  position: absolute;
+  top: 0%;
+  left: 45.3%;
+  width: 29%;
+  height: 100%;
+  border-right: calc(5 * var(--unit)) solid #000;
+}
+
+.boombox .bb__body .middle__section2__box__inner4 {
+  position: absolute;
+  top: 0%;
+  left: 74.3%;
+  width: 25.5%;
+  height: 100%;
 }
 
 .boombox .bb__body .middle__section3 {
@@ -1306,7 +1377,7 @@ img,
 }
 
 .boombox .bb__body .middle__section5__sm__eq__lv {
-  margin-top: 7px;
+  margin-top: 18px;
   width: 100%;
   height: 40%;
   background: -webkit-gradient(linear, left bottom, left top, from(#cfcfcf), color-stop(20%, #6c6c6c), color-stop(#dfdfdf), color-stop(#cfcfcf), color-stop(70%, #929292), to(#cfcfcf));
