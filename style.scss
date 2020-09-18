@@ -24,6 +24,14 @@ $speakerInner2: #4e4b4a;
 $btmLight1: #363834;
 $btmLight2: #141212;
 
+$sc2line: #302b2b;
+$sc2body: #524f48;
+$sc2rollerside1: #312f34;
+$sc2rollerside2: #2e2b2d;
+$sc2rollerbar: #3c3530;
+$sc2clockback: #cabcbc;
+$sc2label: #e0e3f3;
+
 $sc3body1: #281e1d;
 $sc3body2: #443e40;
 $sc3body3: #b1b1b1;
@@ -64,7 +72,7 @@ $sc5eqshadow3: #0b0b0d;
 }
 
 :root {
-  --size: 80;
+  --size: 120;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -105,7 +113,7 @@ img,
     width: 96%;
     height: 72%;
     overflow: hidden;
-    background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
+    // background: linear-gradient($body 0% 2%, $body2 3% 98.3%, $body3 99% 100%);
 
     .big__sp {
       position: absolute;
@@ -699,7 +707,7 @@ img,
         left: 0%;
         width: 100%;
         height: 14%;
-        // background: orange;
+        background: $sc2body;
 
         &__box {
           position: absolute;
@@ -707,7 +715,7 @@ img,
           left: 2%;
           width: 97.5%;
           height: 92%;
-          border: calc(1 * var(--unit)) solid #000;
+          border: calc(1 * var(--unit)) solid $sc2line;
 
           &__inner1 {
             position: absolute;
@@ -715,7 +723,15 @@ img,
             left: 0%;
             width: 12%;
             height: 100%;
-            border-right: calc(1 * var(--unit)) solid #000;
+            border-right: calc(1 * var(--unit)) solid $sc2line;
+
+            &__blackbox {
+              position: absolute;
+              @extend .transCenter;
+              width: 86%;
+              height: 85%;
+              border: calc(1.8 * var(--unit)) solid $sc2line;
+            }
 
             &__redbox {
               position: absolute;
@@ -732,6 +748,9 @@ img,
                 height: 23%;
                 border-radius: calc(0.5 * var(--unit));
                 background: $red1;
+                box-shadow: 0px 1px 1px 0px lighten($sc4sw1, 30%) inset,
+                  0 -2px 2px darken($red1, 20%) inset,
+                  0 2px 3px -1px $bodyShadow, 0 2px 3px 0px $bodyShadow;
               }
             }
           }
@@ -742,7 +761,17 @@ img,
             left: 12%;
             width: 33.3%;
             height: 100%;
-            border-right: calc(1 * var(--unit)) solid #000;
+            border-right: calc(1 * var(--unit)) solid $sc2line;
+            background-image: linear-gradient(
+                transparent 0% 50%,
+                darken($sc2body, 8%) 50% 100%
+              ),
+              linear-gradient(
+                90deg,
+                transparent 0% 50%,
+                darken($sc2body, 8%) 50% 100%
+              );
+            background-size: calc(1.3 * var(--unit)) calc(1.3 * var(--unit));
 
             &__clock {
               position: absolute;
@@ -751,8 +780,40 @@ img,
               width: 40%;
               height: 30%;
               border-radius: calc(1 * var(--unit));
-              border: solid #ffffff;
+              border: solid $sc2label;
               border-width: calc(1 * var(--unit)) calc(1.3 * var(--unit));
+              background: $sc2clockback;
+
+              &__outline {
+                position: absolute;
+                top: 18%;
+                left: 4%;
+                width: 40%;
+                height: 30%;
+                border-radius: calc(1 * var(--unit));
+                border: solid $sc2label;
+                border-width: calc(1 * var(--unit)) calc(1.3 * var(--unit));
+                box-shadow: 0px 2px 1px 0px darken($sc2clockback, 40%) inset,
+                  2px 1px 2px darken($sc2clockback, 40%) inset,
+                  0 0px 2px 0px $bodyShadow;
+              }
+            }
+
+            &__btn {
+              position: absolute;
+              top: 72%;
+              left: 7%;
+              width: 12%;
+              height: 7%;
+              background: #000;
+              border-radius: calc(1 * var(--unit));
+              box-shadow: 0px 1px 1px 0px lighten($sc4sw1, 30%) inset,
+                0 -3px 2px darken($sc2rollerside2, 40%) inset,
+                0 2px 3px -1px $bodyShadow, 0 2px 3px 0px $bodyShadow;
+
+              &:nth-child(2n) {
+                left: 28%;
+              }
             }
           }
 
@@ -762,7 +823,46 @@ img,
             left: 45.3%;
             width: 29%;
             height: 100%;
-            border-right: calc(5 * var(--unit)) solid #000;
+            border-right: calc(5 * var(--unit)) solid $sc2line;
+            &__boxs {
+              position: absolute;
+              top: 1%;
+              left: 0%;
+              width: 100%;
+              height: 50%;
+              display: flex;
+
+              &__bar {
+                position: absolute;
+                top: 1%;
+                left: 1%;
+                width: 99%;
+                height: 23%;
+                background: $sc2label;
+              }
+              &__btns {
+                width: 25%;
+                height: 100%;
+                border: calc(0.5 * var(--unit)) solid $sc2line;
+                &__btn {
+                  margin: 60% auto 0 auto;
+                  width: 78%;
+                  height: 24%;
+                  background: #fff;
+                  border-radius: calc(0.5 * var(--unit));
+                  border: 1px solid $sc4sw2;
+                  background: linear-gradient(#fff 0 50%, $sc4sw2 50% 100%),
+                    linear-gradient(90deg, #fff 0 50%, $sc4sw2 50% 100%);
+                  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+                  box-shadow: 0px 5px 1px 0px lighten($sc4sw1, 30%) inset,
+                    0 -3px 2px darken($sc4sw2, 40%) inset,
+                    0 2px 3px -1px $bodyShadow, 0 2px 3px 0px $bodyShadow;
+                }
+              }
+              &:nth-child(2) {
+                top: 51%;
+              }
+            }
           }
 
           &__inner4 {
@@ -771,7 +871,93 @@ img,
             left: 74.3%;
             width: 25.5%;
             height: 100%;
-            // background: orange;
+
+            &__top {
+              position: absolute;
+              top: 1%;
+              left: 0%;
+              width: 100%;
+              height: 50%;
+
+              &__bartop {
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 99%;
+                height: 20%;
+                background: $sc2label;
+              }
+
+              &__box {
+                position: absolute;
+                top: 28%;
+                left: 5%;
+                width: 88%;
+                height: 57%;
+                background: darken($sc2body, 20%);
+                border: solid $sc2rollerside2;
+                border-width: calc(0.3 * var(--unit)) calc(5 * var(--unit));
+
+                &__roller {
+                  position: absolute;
+                  @extend .transCenter;
+                  width: 90%;
+                  height: 90%;
+                  background: radial-gradient(#fff 0% 50%, $sc2body 80% 100%);
+                  border-radius: 40%;
+
+                  &__bar {
+                    position: absolute;
+                    @extend .transCenter;
+                    width: 100%;
+                    height: 40%;
+                    background: linear-gradient(
+                      45deg,
+                      darken($sc2rollerbar, 20%) 0% 10%,
+                      $sc2rollerbar 20% 80%,
+                      darken($sc2rollerbar, 20%) 90% 100%
+                    );
+                  }
+                }
+              }
+            }
+            &__boxs {
+              position: absolute;
+              top: 51%;
+              left: 0%;
+              width: 100%;
+              height: 50%;
+              display: flex;
+
+              &__bar {
+                position: absolute;
+                top: 1%;
+                left: 1%;
+                width: 99%;
+                height: 23%;
+                background: $sc2label;
+              }
+              &__btns {
+                width: 25%;
+                height: 100%;
+                border: calc(0.5 * var(--unit)) solid $sc2line;
+                &__btn {
+                  margin: 60% auto 0 auto;
+                  width: 78%;
+                  height: 24%;
+                  background: #fff;
+                  border-radius: calc(0.5 * var(--unit));
+                  border: 1px solid $sc4sw2;
+                  background: linear-gradient(#fff 0 50%, $sc4sw2 50% 100%),
+                    linear-gradient(90deg, #fff 0 50%, $sc4sw2 50% 100%);
+                  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
+                  box-shadow: 0px 5px 1px 0px lighten($sc4sw1, 30%) inset,
+                    0 -3px 2px darken($sc4sw2, 40%) inset,
+                    0 2px 3px -1px $bodyShadow, 0 2px 3px 0px $bodyShadow;
+                }
+              }
+              // background: #fff;
+            }
           }
         }
       }

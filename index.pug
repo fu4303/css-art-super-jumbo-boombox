@@ -6,7 +6,7 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Document
     body
-        //- img(src="/boombox.jpg", alt="")
+        img(src="/boombox.jpg", alt="")
         .boombox
             .bb__body
 
@@ -64,15 +64,38 @@ html(lang="en")
                     .middle__section2
                         .middle__section2__box
                             .middle__section2__box__inner1
+                                .middle__section2__box__inner1__blackbox
                                 .middle__section2__box__inner1__redbox
                                     .middle__section2__box__inner1__redbox__btn
 
                             .middle__section2__box__inner2
                                 .middle__section2__box__inner2__clock
+                                .middle__section2__box__inner2__clock__outline
                                 .middle__section2__box__inner2__btn
                                 .middle__section2__box__inner2__btn
                             .middle__section2__box__inner3
+                                - for (let $i = 0; $i < 2; ++$i) {
+                                .middle__section2__box__inner3__boxs
+                                    .middle__section2__box__inner3__boxs__bar
+                                    - for (let $i = 0; $i < 4; ++$i) {
+                                    .middle__section2__box__inner3__boxs__btns
+                                        .middle__section2__box__inner3__boxs__btns__btn
+                                    - }
+                                - }   
+                                
                             .middle__section2__box__inner4
+                                .middle__section2__box__inner4__top
+                                    .middle__section2__box__inner4__top__box
+                                        .middle__section2__box__inner4__top__box__roller
+                                        .middle__section2__box__inner4__top__box__roller__bar
+                                    .middle__section2__box__inner4__top__bartop
+                                .middle__section2__box__inner4__boxs
+                                    .middle__section2__box__inner4__boxs__bar
+                                    - for (let $i = 0; $i < 4; ++$i) {
+                                    .middle__section2__box__inner4__boxs__btns
+                                        .middle__section2__box__inner4__boxs__btns__btn
+                                    - }
+                                  
 
                     
                     .middle__section3
