@@ -8,7 +8,7 @@
 }
 
 :root {
-  --size: 120;
+  --size: 68;
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -31,7 +31,7 @@ img,
           transform: translate(-50%, -50%);
 }
 
-.transCenter, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__outline, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section2__box__inner1__blackbox, .boombox .bb__body .middle__section2__box__inner1__redbox, .boombox .bb__body .middle__section2__box__inner1__redbox__btn, .boombox .bb__body .middle__section2__box__inner4__top__box__roller, .boombox .bb__body .middle__section2__box__inner4__top__box__roller__bar, .boombox .bb__body .middle__section3__box, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__outline, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__outline, .boombox .bb__body .middle__section3__box__mid__box3__lines, .boombox .bb__body .middle__section4__red__grip, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
+.transCenter, .boombox .bb__shadow, .boombox .bb__handle__rubber, .boombox .bb__body .big__sp__box__out__edge__screw, .boombox .bb__body .big__sp__box__out__outline, .boombox .bb__body .big__sp__box__out__inner1, .boombox .bb__body .big__sp__box__out__inner2, .boombox .bb__body .big__sp__box__out__inner3, .boombox .bb__body .big__sp__box__out__inner4, .boombox .bb__body .big__sp__box__out__mesh, .boombox .bb__body .top__sp__box__leftsp__mesh, .boombox .bb__body .top__sp__box__leftsp__inners, .boombox .bb__body .top__sp__box__leftsp__inners__inner1, .boombox .bb__body .top__sp__box__leftsp__inners__inner2, .boombox .bb__body .top__sp__box__leftsp__inners__inner3, .boombox .bb__body .top__sp__box__rightsp__mid, .boombox .bb__body .top__sp__box__btm__shade, .boombox .bb__body .middle__section2__box__inner1__blackbox, .boombox .bb__body .middle__section2__box__inner1__redbox, .boombox .bb__body .middle__section2__box__inner1__redbox__btn, .boombox .bb__body .middle__section2__box__inner4__top__box__roller, .boombox .bb__body .middle__section2__box__inner4__top__box__roller__bar, .boombox .bb__body .middle__section3__box, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1__center__outline, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__holes, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center::after, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__dots, .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape2__center__outline, .boombox .bb__body .middle__section3__box__mid__box3__lines, .boombox .bb__body .middle__section4__red__grip, .boombox .bb__body .middle__section5__center__lines, .boombox .bb__body .middle__section5__left__lines, .boombox .bb__body .middle__section5__right__lines {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -44,6 +44,78 @@ img,
   overflow: hidden;
 }
 
+.boombox .bb__shadow {
+  position: absolute;
+  opacity: 0.7;
+  top: 88%;
+  width: 90%;
+  height: 7%;
+  border-radius: 100%;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  background: radial-gradient(#1e1b1b 0% 60%, transparent);
+}
+
+.boombox .bb__shadow__legs {
+  position: absolute;
+  opacity: 0.7;
+  top: 86%;
+  left: 8.5%;
+  width: 17%;
+  height: 4%;
+  border-radius: 100%;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  background: radial-gradient(#1e1b1b 0% 50%, transparent);
+}
+
+.boombox .bb__shadow__legs:nth-child(2n) {
+  left: 75%;
+}
+
+.boombox .bb__legs {
+  position: absolute;
+  top: 86%;
+  left: 10%;
+  width: 14%;
+  height: 2%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e1b1b), color-stop(#332f2d), color-stop(#47423f), to(#1e1b1b));
+  background: linear-gradient(#1e1b1b, #332f2d, #47423f, #1e1b1b);
+  -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+.boombox .bb__legs:nth-child(2n) {
+  left: 77%;
+}
+
+.boombox .bb__handle {
+  position: absolute;
+  top: 5%;
+  left: 31.5%;
+  width: 37.7%;
+  height: 10%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cfcfcf), color-stop(#6c6c6c), to(#929292));
+  background: linear-gradient(#cfcfcf, #6c6c6c, #929292);
+  -webkit-clip-path: polygon(1.36% 0%, -0.39% 25.72%, -0.18% 100%, 2.26% 102.21%, 2.61% 36.28%, 98.21% 38.5%, 97.89% 100%, 100% 100%, 100% 24.5%, 97.71% 0%);
+          clip-path: polygon(1.36% 0%, -0.39% 25.72%, -0.18% 100%, 2.26% 102.21%, 2.61% 36.28%, 98.21% 38.5%, 97.89% 100%, 100% 100%, 100% 24.5%, 97.71% 0%);
+}
+
+.boombox .bb__handle:first-child {
+  left: 32.2%;
+  width: 36.5%;
+  background: #6c6c6c;
+}
+
+.boombox .bb__handle__rubber {
+  position: absolute;
+  top: 18%;
+  width: 88%;
+  height: 35%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5f5d69), color-stop(4%, #2e2d33), color-stop(20%, black), color-stop(23%, #2e2d33), color-stop(80%, #5f5d69), color-stop(83%, #2e2d33), color-stop(97%, black));
+  background: linear-gradient(#5f5d69 0% 3%, #2e2d33 4% 20%, black 20% 23%, #2e2d33 23% 80%, #5f5d69 80% 83%, #2e2d33 83% 97%, black 97% 100%);
+}
+
 .boombox .bb__body {
   position: absolute;
   top: 14%;
@@ -51,6 +123,8 @@ img,
   width: 96%;
   height: 72%;
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#47423f), color-stop(3%, #332f2d), color-stop(99%, #1e1b1b));
+  background: linear-gradient(#47423f 0% 2%, #332f2d 3% 98.3%, #1e1b1b 99% 100%);
 }
 
 .boombox .bb__body .big__sp {
@@ -553,6 +627,194 @@ img,
   left: 0%;
   width: 100%;
   height: 28.5%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#47423f), color-stop(10%, #161110));
+  background: linear-gradient(#47423f 0% 10%, #161110 10% 100%);
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section1__frame {
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+  border: calc(6 * var(--unit)) solid #2e292a;
+}
+
+.boombox .bb__body .middle__section1__frame__glare {
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+  -webkit-box-shadow: 1px 1px 2px -1px white inset, 2px 0 2px -1px black inset, 0 -2px 2px -1px black inset;
+          box-shadow: 1px 1px 2px -1px white inset, 2px 0 2px -1px black inset, 0 -2px 2px -1px black inset;
+  overflow: hidden;
+}
+
+.boombox .bb__body .middle__section1__frame__glare::after {
+  content: "";
+  opacity: 0.08;
+  position: absolute;
+  top: -110%;
+  left: -30%;
+  width: 100%;
+  height: 400%;
+  background: #c8c1c2;
+  -webkit-transform: skewY(-65deg);
+          transform: skewY(-65deg);
+}
+
+.boombox .bb__body .middle__section1__frame__glare__sheet {
+  opacity: 0.1;
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+  background: #c8c1c2;
+}
+
+.boombox .bb__body .middle__section1__stick {
+  position: absolute;
+  top: 8%;
+  left: 40%;
+  width: 0.5%;
+  height: 58%;
+  background: #c8c1c2;
+}
+
+.boombox .bb__body .middle__section1__top {
+  position: absolute;
+  top: 28%;
+  left: 9%;
+  width: 82%;
+  height: 45%;
+  background: #281e1d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(95%, #1f1717)), -webkit-gradient(linear, left top, right top, from(transparent), color-stop(95%, #1f1717));
+  background-image: linear-gradient(transparent 0% 95%, #1f1717 95% 100%), linear-gradient(90deg, transparent 0% 95%, #1f1717 95% 100%);
+  background-size: calc(4.5 * var(--unit)) calc(4.5 * var(--unit));
+}
+
+.boombox .bb__body .middle__section1__top__leftbox {
+  position: absolute;
+  top: 9%;
+  left: 2%;
+  width: 18%;
+  height: 18%;
+  background: #1e1b1b;
+}
+
+.boombox .bb__body .middle__section1__top__leftbox__arrow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 40%;
+  height: 57%;
+  background: #fff;
+}
+
+.boombox .bb__body .middle__section1__top__leftbox__arrow::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: calc(1.3 * var(--unit)) 0 calc(1.3 * var(--unit)) calc(1.5 * var(--unit));
+  border-color: transparent transparent transparent #fff;
+}
+
+.boombox .bb__body .middle__section1__top__leftbox:nth-child(2) {
+  top: 30%;
+}
+
+.boombox .bb__body .middle__section1__top__leftbox:nth-child(3) {
+  top: 53%;
+}
+
+.boombox .bb__body .middle__section1__top__leftbox:nth-child(4) {
+  top: 75%;
+}
+
+.boombox .bb__body .middle__section1__btm {
+  position: absolute;
+  top: 76%;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+  background: #281e1d;
+  -webkit-clip-path: polygon(8.36% 0%, 91.19% -2.18%, 101.37% 91.26%, -2.05% 93.45%);
+          clip-path: polygon(8.36% 0%, 91.19% -2.18%, 101.37% 91.26%, -2.05% 93.45%);
+}
+
+.boombox .bb__body .middle__section1__btm__blueline__out {
+  position: absolute;
+  top: 2%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9999ff), to(#fff));
+  background: linear-gradient(#9999ff, #fff);
+  -webkit-clip-path: polygon(20% 0%, 80.91% 0%, 97.72% 121.86%, 5.25% 121.86%);
+          clip-path: polygon(20% 0%, 80.91% 0%, 97.72% 121.86%, 5.25% 121.86%);
+}
+
+.boombox .bb__body .middle__section1__btm__blueline__in {
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: #281e1d;
+  -webkit-clip-path: polygon(24.11% -10.93%, 78.17% -5.46%, 91.56% 149.18%, 9.59% 143.72%);
+          clip-path: polygon(24.11% -10.93%, 78.17% -5.46%, 91.56% 149.18%, 9.59% 143.72%);
+}
+
+.boombox .bb__body .middle__section1__btm__redline__out {
+  position: absolute;
+  top: 4%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9999), to(#fff));
+  background: linear-gradient(#ff9999, #fff);
+  -webkit-clip-path: polygon(24.34% -5.46%, 77.72% -5.46%, 90.42% 149.18%, 10.27% 149.18%);
+          clip-path: polygon(24.34% -5.46%, 77.72% -5.46%, 90.42% 149.18%, 10.27% 149.18%);
+}
+
+.boombox .bb__body .middle__section1__btm__redline__in {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: #281e1d;
+  -webkit-clip-path: polygon(27.53% 10.93%, 76.12% 10.93%, 86.54% 149.18%, 16.21% 154.65%);
+          clip-path: polygon(27.53% 10.93%, 76.12% 10.93%, 86.54% 149.18%, 16.21% 154.65%);
+}
+
+.boombox .bb__body .middle__section1__btm__blackline__out {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
+  height: 40%;
+  background: #443e40;
+  -webkit-clip-path: polygon(32.55% 27.32%, 69.96% 27.32%, 77.64% 160.11%, 26.94% 165.58%);
+          clip-path: polygon(32.55% 27.32%, 69.96% 27.32%, 77.64% 160.11%, 26.94% 165.58%);
+}
+
+.boombox .bb__body .middle__section1__btm__lines {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #1f1717));
+  background-image: linear-gradient(transparent 0% 70%, #1f1717 70% 100%);
+  background-size: calc(1 * var(--unit)) calc(1 * var(--unit));
 }
 
 .boombox .bb__body .middle__section2 {
@@ -1466,23 +1728,12 @@ img,
 .boombox .bb__body .middle__section5__big__eq {
   position: absolute;
   top: 15%;
+  left: 20%;
   width: 2.5%;
   height: 70%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0e0e10), color-stop(20%, #38393f), to(#0b0b0d));
   background: linear-gradient(#0e0e10 0 15%, #38393f 20% 70%, #0b0b0d);
   overflow: hidden;
-}
-
-.boombox .bb__body .middle__section5__big__eq:nth-child(5) {
-  left: 20%;
-}
-
-.boombox .bb__body .middle__section5__big__eq:nth-child(2n) {
-  left: 77%;
-}
-
-.boombox .bb__body .middle__section5__big__eq:nth-child(3n + 1) {
-  left: 85%;
 }
 
 .boombox .bb__body .middle__section5__big__eq__lv {
@@ -1497,6 +1748,14 @@ img,
           box-shadow: 1px 1px 4px -1px #dfdfdf inset, 2px 0 2px -1px #dfdfdf inset, 0 -2px 2px -1px #dfdfdf inset, 0 8px 5px -1px #0b0b0d;
 }
 
+.boombox .bb__body .middle__section5__big__eq:nth-child(2n) {
+  left: 77%;
+}
+
+.boombox .bb__body .middle__section5__big__eq:nth-child(3n) {
+  left: 85%;
+}
+
 .boombox .bb__body .middle__section5__karaoke {
   position: absolute;
   bottom: 12%;
@@ -1507,7 +1766,7 @@ img,
 }
 
 .boombox .bb__body .middle__section5__karaoke::after {
-  content: "karaoke";
+  content: "";
   position: absolute;
   top: 40%;
   right: -25%;
@@ -1545,7 +1804,7 @@ img,
 }
 
 .boombox .bb__body .middle__section5__sm__eq__lv {
-  margin-top: 2px;
+  margin-top: 15px;
   width: 100%;
   height: 40%;
   background: -webkit-gradient(linear, left bottom, left top, from(#cfcfcf), color-stop(20%, #6c6c6c), color-stop(#dfdfdf), color-stop(#cfcfcf), color-stop(70%, #929292), to(#cfcfcf));

@@ -6,8 +6,19 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Document
     body
-        img(src="/boombox.jpg", alt="")
+        //- img(src="/boombox.jpg", alt="")
         .boombox
+            .bb__shadow
+            .bb__shadow__legs
+            .bb__shadow__legs
+            .bb__handle
+            .bb__handle
+                .bb__handle__rubber
+
+            .bb__legs
+            .bb__legs
+                
+
             .bb__body
 
                 - for (var $i = 0; $i < 2; ++$i) {
@@ -61,6 +72,24 @@ html(lang="en")
 
                 .middle
                     .middle__section1
+                        .middle__section1__top
+                            - for (let $i = 0; $i < 4; ++$i){
+                            .middle__section1__top__leftbox
+                                .middle__section1__top__leftbox__arrow
+                            -}
+                            
+                        .middle__section1__btm
+                            .middle__section1__btm__blueline__out
+                            .middle__section1__btm__blueline__in
+                            .middle__section1__btm__redline__out
+                            .middle__section1__btm__redline__in
+                            .middle__section1__btm__lines
+                            .middle__section1__btm__blackline__out
+                                .middle__section1__btm__blackline__in
+                        .middle__section1__stick
+                        .middle__section1__frame__glare__sheet
+                        .middle__section1__frame
+                        .middle__section1__frame__glare
                     .middle__section2
                         .middle__section2__box
                             .middle__section2__box__inner1
