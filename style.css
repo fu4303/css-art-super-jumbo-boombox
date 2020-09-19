@@ -265,6 +265,7 @@ img,
   border-radius: 100%;
   background: #393636;
   border: calc(1 * var(--unit)) solid #dfdfdf;
+  overflow: hidden;
 }
 
 .boombox .bb__body .big__sp__box__out__inner2 {
@@ -273,6 +274,10 @@ img,
   height: 54%;
   border-radius: 100%;
   background: #4e4b4a;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite bigspeaker;
+          animation: 0.5s ease-in-out infinite bigspeaker;
 }
 
 .boombox .bb__body .big__sp__box__out__inner3 {
@@ -281,6 +286,10 @@ img,
   height: 28%;
   border-radius: 100%;
   background: #929292;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite bigspeaker;
+          animation: 0.5s ease-in-out infinite bigspeaker;
 }
 
 .boombox .bb__body .big__sp__box__out__inner4 {
@@ -290,6 +299,10 @@ img,
   border: calc(2 * var(--unit)) solid #393636;
   border-radius: 100%;
   background: linear-gradient(45deg, #929292, #6c6c6c, #929292, #cfcfcf, #dfdfdf, #cfcfcf);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite bigspeaker;
+          animation: 0.5s ease-in-out infinite bigspeaker;
 }
 
 .boombox .bb__body .big__sp__box__out__mesh {
@@ -441,6 +454,10 @@ img,
   height: 60%;
   border-radius: 100%;
   background: #4e4b4a;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite smallspeaker;
+          animation: 0.5s ease-in-out infinite smallspeaker;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners__inner2 {
@@ -449,6 +466,10 @@ img,
   height: 25%;
   border-radius: 100%;
   background: linear-gradient(45deg, #6c6c6c, #929292, #cfcfcf, #dfdfdf);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite smallspeaker;
+          animation: 0.5s ease-in-out infinite smallspeaker;
 }
 
 .boombox .bb__body .top__sp__box__leftsp__inners__inner3 {
@@ -458,6 +479,10 @@ img,
   border-radius: 100%;
   border: calc(1 * var(--unit)) solid #332f2d;
   background: linear-gradient(45deg, #6c6c6c, #929292, #cfcfcf, #dfdfdf);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 0.5s ease-in-out infinite smallspeaker;
+          animation: 0.5s ease-in-out infinite smallspeaker;
 }
 
 .boombox .bb__body .top__sp__box__rightsp {
@@ -1185,6 +1210,13 @@ img,
           box-shadow: 2px 2px 2px -1px #323232 inset, -5px 2px 2px 0px #323232 inset !important;
 }
 
+.boombox .bb__body .middle__section3__box__cassets__box__inner__in__window .tapespin {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: 2s linear infinite tape;
+          animation: 2s linear infinite tape;
+}
+
 .boombox .bb__body .middle__section3__box__cassets__box__inner__in__window__tape1 {
   position: absolute;
   top: -2%;
@@ -1766,7 +1798,7 @@ img,
 }
 
 .boombox .bb__body .middle__section5__karaoke::after {
-  content: "";
+  content: "karaoke";
   position: absolute;
   top: 40%;
   right: -25%;
@@ -1778,7 +1810,7 @@ img,
   text-align: center;
   -webkit-transform: scaleX(0.8);
           transform: scaleX(0.8);
-  font-size: 50%;
+  font-size: calc(3 * var(--unit));
 }
 
 .boombox .bb__body .middle__section5__sm {
@@ -1905,5 +1937,87 @@ img,
 
 .boombox .bb__body .middle__section5__right__hole:nth-last-child(2) {
   left: 74%;
+}
+
+@-webkit-keyframes bigspeaker {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes bigspeaker {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@-webkit-keyframes smallspeaker {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes smallspeaker {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@-webkit-keyframes tape {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes tape {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

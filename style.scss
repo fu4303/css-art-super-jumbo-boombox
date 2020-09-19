@@ -389,6 +389,7 @@ img,
             border-radius: 100%;
             background: $speakerInner;
             border: calc(1 * var(--unit)) solid $silver1;
+            overflow: hidden;
           }
 
           &__inner2 {
@@ -398,6 +399,8 @@ img,
             height: 54%;
             border-radius: 100%;
             background: $speakerInner2;
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite bigspeaker;
           }
 
           &__inner3 {
@@ -407,6 +410,8 @@ img,
             height: 28%;
             border-radius: 100%;
             background: $silver3;
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite bigspeaker;
           }
 
           &__inner4 {
@@ -425,6 +430,8 @@ img,
               $silver1,
               $silver2
             );
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite bigspeaker;
           }
 
           &__mesh {
@@ -588,6 +595,8 @@ img,
             height: 60%;
             border-radius: 100%;
             background: $speakerInner2;
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite smallspeaker;
           }
 
           &__inner2 {
@@ -603,6 +612,8 @@ img,
               $silver2,
               $silver1
             );
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite smallspeaker;
           }
 
           &__inner3 {
@@ -619,6 +630,8 @@ img,
               $silver2,
               $silver1
             );
+            backface-visibility: hidden;
+            animation: 0.5s ease-in-out infinite smallspeaker;
           }
         }
       }
@@ -1282,10 +1295,8 @@ img,
           top: 49%;
           width: 97%;
           height: 87%;
-          //   background: red;
           border-radius: calc(1 * var(--unit));
           overflow: hidden;
-          //   opacity: 0.2;
 
           &__cassets {
             position: absolute;
@@ -1392,6 +1403,11 @@ img,
                     &__glare .cassete2__shadow {
                       box-shadow: 2px 2px 2px -1px darken($sc3body3, 50%) inset,
                         -5px 2px 2px 0px darken($sc3body3, 50%) inset !important;
+                    }
+
+                    .tapespin {
+                      backface-visibility: hidden;
+                      animation: 2s linear infinite tape;
                     }
 
                     &__tape1 {
@@ -1950,7 +1966,7 @@ img,
           background: $sc5red;
 
           &::after {
-            content: "";
+            content: "karaoke";
             position: absolute;
             top: 40%;
             right: -25%;
@@ -1961,7 +1977,7 @@ img,
             font-family: "Fjalla One", sans-serif;
             text-align: center;
             transform: scaleX(0.8);
-            font-size: 50%;
+            font-size: calc(3 * var(--unit));
           }
         }
 
@@ -2099,5 +2115,38 @@ img,
         }
       }
     }
+  }
+}
+
+@keyframes bigspeaker {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes smallspeaker {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes tape {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
