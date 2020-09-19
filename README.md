@@ -2,7 +2,7 @@
 
 ![css art boombox](https://user-images.githubusercontent.com/56504519/93669189-3ef98100-facd-11ea-8bb9-e58be79efdee.jpg)
 
-PUG / SCSS 
+PUG / SCSS Looks good on Firefox 
 
 Still working on the details.
 
