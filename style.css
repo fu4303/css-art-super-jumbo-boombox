@@ -721,6 +721,33 @@ img,
   background-size: calc(4.5 * var(--unit)) calc(4.5 * var(--unit));
 }
 
+.boombox .bb__body .middle__section1__top__tb {
+  position: absolute;
+  top: 10%;
+  left: 26%;
+  width: 60%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.boombox .bb__body .middle__section1__top__tb__text {
+  width: 98%;
+  text-align: justify;
+  text-align-last: justify;
+  font-family: "Fjalla One", sans-serif;
+  font-size: calc(2 * var(--unit));
+  color: #fff;
+}
+
 .boombox .bb__body .middle__section1__top__leftbox {
   position: absolute;
   top: 9%;

@@ -74,7 +74,7 @@ $sc5eqshadow3: #0b0b0d;
 }
 
 :root {
-  --size: 68;
+  --size: 68; //68
   --unit: calc((var(--size) / 242) * 1vmin);
 }
 
@@ -857,6 +857,7 @@ img,
           height: 58%;
           background: lighten($sc5box, 60%);
         }
+
         &__top {
           position: absolute;
           top: 28%;
@@ -874,6 +875,27 @@ img,
               darken($sc3body1, 3%) 95% 100%
             );
           background-size: calc(4.5 * var(--unit)) calc(4.5 * var(--unit));
+
+          &__tb {
+            position: absolute;
+            top: 10%;
+            left: 26%;
+            width: 60%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            &__text {
+              width: 98%;
+              text-align: justify;
+              text-align-last: justify;
+              font-family: "Fjalla One", sans-serif;
+              font-size: calc(2 * var(--unit));
+              color: #fff;
+            }
+          }
+
           &__leftbox {
             position: absolute;
             top: 9%;
